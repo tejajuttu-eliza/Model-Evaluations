@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cover",
+    "eyebrow": "GPT-6 Astra vs GPT-5.6 Sol",
+    "title": "The task decides<br>the <em>upgrade.</em>",
+    "note": "Findings from early-access Vega-alpha testing against GPT-5.6 Sol. The launch version has not been retested.",
+    "sources": "Companion evidence package \u00b7 scope and model provenance",
+    "cls": "cover"
+  },
+  {
+    "key": "api-results",
+    "eyebrow": "Direct API \u00b7 Vega output relative to Sol",
+    "title": "One model.<br><em>Opposite</em> token results.",
+    "note": "Matched passing pairs; change in summed output tokens, including reasoning. Separate task families, not a pooled model effect. Repeats are not new designs.",
+    "sources": "Companion evidence package \u00b7 API claims and candidate ledger",
+    "cls": ""
+  },
+  {
+    "key": "surfaces",
+    "eyebrow": "Separate evidence surfaces",
+    "title": "API and Codex answer<br><em>different questions.</em>",
+    "note": "Codex examples are synthetic packet tasks, not long repository work. FDE grading included model rubrics. Different tasks and runtime context prevent an API-versus-Codex causal comparison.",
+    "sources": "Companion evidence package \u00b7 surface inventory and Codex strata",
+    "cls": ""
+  },
+  {
+    "key": "quality",
+    "eyebrow": "Quality before efficiency",
+    "title": "Token efficiency matters<br><em>after it works.</em>",
+    "note": "200 assigned attempts across 22 selected designs and multiple effort settings. Both failures were one repository design at high / xhigh. This is not established production-quality equivalence.",
+    "sources": "Companion evidence package \u00b7 primary outcomes and failure ledger",
+    "cls": ""
+  },
+  {
+    "key": "recent",
+    "eyebrow": "Recent completed follow-up",
+    "title": "The advantage can<br><em>get small.</em>",
+    "note": "Fresh attempts used a larger budget, longer timeout and serial execution. Recovery does not prove the old cap caused the failures. Time is median end-to-end elapsed time, not decoding speed.",
+    "sources": "Companion evidence package \u00b7 response-budget follow-up",
+    "cls": ""
+  },
+  {
+    "key": "economics",
+    "eyebrow": "Task economics",
+    "title": "Measure the full<br><em>cost of the task.</em>",
+    "note": "High \u00b7 2 designs \u00b7 4 passing pairs. Shared Sol-rate scenario; Vega pricing was unverified. Provider calls only: review, tool hosting and orchestration costs are excluded.",
+    "sources": "Companion evidence package \u00b7 cost formula, input/cache/output accounting",
+    "cls": ""
+  },
+  {
+    "key": "evidence",
+    "eyebrow": "An inspectable evaluation",
+    "title": "The evidence should<br><em>travel with the claim.</em>",
+    "note": "Small exploratory samples and repeated designs cannot establish a universal model ranking. The package separates candidate outcomes, measurement boundaries and public-release limitations.",
+    "sources": "Companion evidence package \u00b7 methodology, claims, candidates and strata",
+    "cls": ""
+  },
+  {
+    "key": "takeaway",
+    "eyebrow": "What this changes for delivery",
+    "title": "Test the workflow.<br><em>Then choose the model.</em>",
+    "note": "An early-access field study of Vega-alpha and GPT-5.6 Sol. The next decision should use your own acceptance criteria and current deployed versions.",
+    "sources": "Eliza \u00b7 technical delivery and model evaluation",
+    "cls": "closing"
+  }
+]

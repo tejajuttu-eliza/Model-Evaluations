@@ -1,0 +1,232 @@
+{
+  "source_audit_sha256": "2f38270f4f6788cf3ccdf06abab4dc09659dd54b2dc4fc464b8acf4a417f3f27",
+  "metric": "output includes reasoning; reduction = 1 - Vega sum / Sol sum",
+  "tested_aliases": [
+    "vega-alpha",
+    "gpt-5.6-sol"
+  ],
+  "launch_name": "GPT-6 Astra",
+  "launch_checkpoint_retested": false,
+  "groups": {
+    "api": {
+      "pairs": 15,
+      "designs": 15,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "C1-high-r1",
+        "C2-high-r1",
+        "C3-high-r1",
+        "D1-high-r1",
+        "D2-high-r1",
+        "F1-high-r1",
+        "HE000-high-r1",
+        "HE012-high-r1",
+        "HE026-high-r1",
+        "HE035-high-r1",
+        "N1-high-r1",
+        "N2-high-r1",
+        "R1-high-r1",
+        "R2-high-r1",
+        "R3-high-r1"
+      ],
+      "sol": {
+        "input_tokens": 15616,
+        "output_tokens": 6851,
+        "reasoning_tokens": 4047,
+        "reference_cost_usd": 0.210986,
+        "median_elapsed_seconds": 4.060634459005087
+      },
+      "vega": {
+        "input_tokens": 15616,
+        "output_tokens": 6966,
+        "reasoning_tokens": 4146,
+        "reference_cost_usd": 0.213286,
+        "median_elapsed_seconds": 8.514856750000035
+      }
+    },
+    "public": {
+      "pairs": 16,
+      "designs": 16,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "HE005-high-r1",
+        "HE006-high-r1",
+        "HE024-high-r1",
+        "HE074-high-r1",
+        "HE083-high-r1",
+        "HE094-high-r1",
+        "HE096-high-r1",
+        "HE118-high-r1",
+        "HE120-high-r1",
+        "HE121-high-r1",
+        "HE125-high-r1",
+        "HE141-high-r1",
+        "HE143-high-r1",
+        "HE148-high-r1",
+        "HE160-high-r1",
+        "HE162-high-r1"
+      ],
+      "sol": {
+        "input_tokens": 3808,
+        "output_tokens": 5656,
+        "reasoning_tokens": 2874,
+        "reference_cost_usd": 0.128352,
+        "median_elapsed_seconds": 4.357779687998118
+      },
+      "vega": {
+        "input_tokens": 3808,
+        "output_tokens": 5717,
+        "reasoning_tokens": 3098,
+        "reference_cost_usd": 0.129572,
+        "median_elapsed_seconds": 6.286286041504354
+      }
+    },
+    "exact": {
+      "pairs": 6,
+      "designs": 3,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "frontier-reasoning-XR-A1-high-clean-r1",
+        "frontier-reasoning-XR-A1-high-clean-r2",
+        "frontier-reasoning-XR-P1-high-clean-r1",
+        "frontier-reasoning-XR-P1-high-clean-r2",
+        "frontier-reasoning-XR-S1-high-clean-r1",
+        "frontier-reasoning-XR-S1-high-clean-r2"
+      ],
+      "sol": {
+        "input_tokens": 5616,
+        "output_tokens": 30679,
+        "reasoning_tokens": 29855,
+        "reference_cost_usd": 0.6332516,
+        "median_elapsed_seconds": 81.82178824950824
+      },
+      "vega": {
+        "input_tokens": 5616,
+        "output_tokens": 10968,
+        "reasoning_tokens": 9902,
+        "reference_cost_usd": 0.2390316,
+        "median_elapsed_seconds": 38.76002981250349
+      }
+    },
+    "staged": {
+      "pairs": 3,
+      "designs": 3,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "staged-repo-LR1-high-clean-r1",
+        "staged-repo-LR2-high-clean-r1",
+        "staged-repo-LR3-high-clean-r1"
+      ],
+      "sol": {
+        "input_tokens": 503243,
+        "output_tokens": 34579,
+        "reasoning_tokens": 15498,
+        "reference_cost_usd": 1.1565708,
+        "median_elapsed_seconds": 156.22174225001072
+      },
+      "vega": {
+        "input_tokens": 810417,
+        "output_tokens": 48660,
+        "reasoning_tokens": 10344,
+        "reference_cost_usd": 1.6774846,
+        "median_elapsed_seconds": 343.6693027500005
+      }
+    },
+    "cap": {
+      "pairs": 2,
+      "designs": 1,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "cap16384-RW3-high-r1",
+        "cap16384-RW3-high-r2"
+      ],
+      "sol": {
+        "input_tokens": 134563,
+        "output_tokens": 22529,
+        "reasoning_tokens": 13131,
+        "reference_cost_usd": 0.6266536,
+        "median_elapsed_seconds": 155.57152039599168
+      },
+      "vega": {
+        "input_tokens": 103129,
+        "output_tokens": 21603,
+        "reasoning_tokens": 14118,
+        "reference_cost_usd": 0.576219,
+        "median_elapsed_seconds": 214.50217766699643
+      }
+    },
+    "context": {
+      "pairs": 4,
+      "designs": 2,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "context-extension-CX1-192k-3turn-high-clean-r1",
+        "context-extension-CX1-96k-3turn-high-clean-r1",
+        "context-extension-CX2-192k-3turn-high-clean-r1",
+        "context-extension-CX2-96k-3turn-high-clean-r1"
+      ],
+      "sol": {
+        "input_tokens": 1720878,
+        "output_tokens": 6979,
+        "reasoning_tokens": 3324,
+        "reference_cost_usd": 3.4820262,
+        "median_elapsed_seconds": 24.365576541997143
+      },
+      "vega": {
+        "input_tokens": 1718123,
+        "output_tokens": 4957,
+        "reasoning_tokens": 1150,
+        "reference_cost_usd": 3.4318223999999997,
+        "median_elapsed_seconds": 30.940816188005556
+      }
+    },
+    "codex_coding": {
+      "pairs": 3,
+      "designs": 3,
+      "selection": "all assigned pairs",
+      "pair_ids": [
+        "C1-high-r1",
+        "C2-high-r1",
+        "C3-high-r1"
+      ],
+      "sol": {
+        "input_tokens": 222134,
+        "output_tokens": 1674,
+        "reasoning_tokens": 493,
+        "reference_cost_usd": 0.1520192,
+        "median_elapsed_seconds": 16.297
+      },
+      "vega": {
+        "input_tokens": 194634,
+        "output_tokens": 1403,
+        "reasoning_tokens": 391,
+        "reference_cost_usd": 0.1150966,
+        "median_elapsed_seconds": 13.619
+      }
+    },
+    "codex_fde": {
+      "pairs": 3,
+      "designs": 3,
+      "selection": "all assigned pairs",
+      "pair_ids": [
+        "F1-high-r1",
+        "F2-high-r1",
+        "F3-high-r1"
+      ],
+      "sol": {
+        "input_tokens": 222679,
+        "output_tokens": 2422,
+        "reasoning_tokens": 1125,
+        "reference_cost_usd": 0.1691592,
+        "median_elapsed_seconds": 22.064
+      },
+      "vega": {
+        "input_tokens": 195157,
+        "output_tokens": 3009,
+        "reasoning_tokens": 1235,
+        "reference_cost_usd": 0.297441,
+        "median_elapsed_seconds": 30.336
+      }
+    }
+  }
+}

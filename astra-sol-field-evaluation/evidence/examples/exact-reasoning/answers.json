@@ -1,0 +1,242 @@
+[
+  {
+    "run_id": "frontier-reasoning-XR-A1-high-clean-r1-sol",
+    "case_id": "XR-A1",
+    "tested_alias": "gpt-5.6-sol",
+    "effort": "high",
+    "repetition": 1,
+    "answer_text": "{\"status\":\"optimal\",\"assignment\":{\"J1\":\"A\",\"J2\":\"B\",\"J3\":\"C\",\"J4\":\"D\",\"J5\":\"B\",\"J6\":\"B\",\"J7\":\"C\",\"J8\":\"A\",\"J9\":\"B\"},\"objective\":58,\"checks\":{\"loads\":{\"A\":7,\"B\":10,\"C\":6,\"D\":4},\"opened\":[\"A\",\"B\",\"C\",\"D\"],\"variable_cost\":37,\"fixed_cost\":21},\"explanation\":\"All capacities and pair constraints are satisfied. Exhaustive comparison of possible opened-machine subsets gives a lower bound of 58, attained by this assignment.\"}",
+    "recorded_success": true,
+    "input_tokens": 1077,
+    "output_tokens": 8785,
+    "reasoning_tokens": 8648,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 114.10887337499298,
+      "last_visible_text_seconds": 115.02829716600536,
+      "visible_characters": 419,
+      "visible_delta_events": 131,
+      "visible_token_rate_proxy_per_second": 148.29512068898646,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-A1-high-clean-r1-vega",
+    "case_id": "XR-A1",
+    "tested_alias": "vega-alpha",
+    "effort": "high",
+    "repetition": 1,
+    "answer_text": "{\"status\":\"optimal\",\"assignment\":{\"J1\":\"A\",\"J2\":\"B\",\"J3\":\"C\",\"J4\":\"D\",\"J5\":\"A\",\"J6\":\"B\",\"J7\":\"C\",\"J8\":\"B\",\"J9\":\"A\"},\"objective\":58,\"checks\":{\"loads\":{\"A\":9,\"B\":8,\"C\":6,\"D\":4},\"opened\":[\"A\",\"B\",\"C\",\"D\"],\"variable_cost\":37,\"fixed_cost\":21},\"explanation\":\"All allowed-machine, capacity, separate, and together constraints hold. Total load 27 requires at least three machines. Capacity and separation constraints give objective lower bounds of 60, 61, 62, 59, and 58 for opened sets ABC, ABD, ACD, BCD, and ABCD respectively. This assignment attains 58, proving optimality.\"}",
+    "recorded_success": true,
+    "input_tokens": 1077,
+    "output_tokens": 2549,
+    "reasoning_tokens": 2365,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 45.97098804199777,
+      "last_visible_text_seconds": 49.32390329199552,
+      "visible_characters": 571,
+      "visible_delta_events": 178,
+      "visible_token_rate_proxy_per_second": 54.6854014987707,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-A1-high-clean-r2-sol",
+    "case_id": "XR-A1",
+    "tested_alias": "gpt-5.6-sol",
+    "effort": "high",
+    "repetition": 2,
+    "answer_text": "{\"status\":\"optimal\",\"assignment\":{\"J1\":\"A\",\"J2\":\"B\",\"J3\":\"C\",\"J4\":\"D\",\"J5\":\"B\",\"J6\":\"B\",\"J7\":\"C\",\"J8\":\"A\",\"J9\":\"B\"},\"objective\":58,\"checks\":{\"loads\":{\"A\":7,\"B\":10,\"C\":6,\"D\":4},\"opened\":[\"A\",\"B\",\"C\",\"D\"],\"variable_cost\":37,\"fixed_cost\":21},\"explanation\":\"All capacities and pair constraints are satisfied. Comparing every possible three-machine set with the four-machine case gives a lower bound of 58, attained here.\"}",
+    "recorded_success": true,
+    "input_tokens": 1077,
+    "output_tokens": 5242,
+    "reasoning_tokens": 5104,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 63.911651625006925,
+      "last_visible_text_seconds": 64.83361404101015,
+      "visible_characters": 418,
+      "visible_delta_events": 132,
+      "visible_token_rate_proxy_per_second": 148.9645462057315,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-A1-high-clean-r2-vega",
+    "case_id": "XR-A1",
+    "tested_alias": "vega-alpha",
+    "effort": "high",
+    "repetition": 2,
+    "answer_text": "{\"status\":\"optimal\",\"assignment\":{\"J1\":\"A\",\"J2\":\"B\",\"J3\":\"C\",\"J4\":\"D\",\"J5\":\"A\",\"J6\":\"B\",\"J7\":\"C\",\"J8\":\"B\",\"J9\":\"A\"},\"objective\":58,\"checks\":{\"loads\":{\"A\":9,\"B\":8,\"C\":6,\"D\":4},\"opened\":[\"A\",\"B\",\"C\",\"D\"],\"variable_cost\":37,\"fixed_cost\":21},\"explanation\":\"All allowed-machine, capacity, separate, and together constraints hold. Total load 27 requires at least three machines. Objective lower bounds with A, B, C, or D closed are respectively 59, 62, 60, and 60. With all four open, capacity constraints force variable cost at least 37, giving a lower bound of 58, attained here.\"}",
+    "recorded_success": true,
+    "input_tokens": 1077,
+    "output_tokens": 1737,
+    "reasoning_tokens": 1552,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 30.629944041997078,
+      "last_visible_text_seconds": 34.01341279200278,
+      "visible_characters": 577,
+      "visible_delta_events": 179,
+      "visible_token_rate_proxy_per_second": 54.48809071047782,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-P1-high-clean-r1-sol",
+    "case_id": "XR-P1",
+    "tested_alias": "gpt-5.6-sol",
+    "effort": "high",
+    "repetition": 1,
+    "answer_text": "{\"status\":\"optimal\",\"selected\":[\"P2\",\"P3\",\"P5\",\"P8\",\"P9\"],\"objective\":62,\"checks\":{\"resource_totals\":{\"cost\":23,\"hours\":22},\"base_value\":62,\"bonus_value\":0,\"authoritative_sources\":{\"cost\":\"B2\",\"hours\":\"H2\",\"prohibited\":\"S1\"}},\"explanation\":\"This set satisfies both at-least-one groups, P8's dependencies, and the P2/P7 exclusivity rule. P4 is excluded. It uses 23 of 27 cost units and all 22 approved hours; no bonus applies. No feasible set has greater total value.\"}",
+    "recorded_success": true,
+    "input_tokens": 951,
+    "output_tokens": 1692,
+    "reasoning_tokens": 1552,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 21.71971616699011,
+      "last_visible_text_seconds": 23.488575249997666,
+      "visible_characters": 468,
+      "visible_delta_events": 134,
+      "visible_token_rate_proxy_per_second": 78.80882696697778,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-P1-high-clean-r1-vega",
+    "case_id": "XR-P1",
+    "tested_alias": "vega-alpha",
+    "effort": "high",
+    "repetition": 1,
+    "answer_text": "{\"status\":\"optimal\",\"selected\":[\"P2\",\"P3\",\"P5\",\"P8\",\"P9\"],\"objective\":62,\"checks\":{\"resource_totals\":{\"cost\":23,\"hours\":22},\"base_value\":62,\"bonus_value\":0,\"authoritative_sources\":{\"cost\":\"B2\",\"hours\":\"H2\",\"prohibited\":\"S1\"}},\"explanation\":\"Exact case analysis gives a maximum objective of 62. P8's dependencies P2 and P3 are selected, all group constraints hold, and prohibited P4 is excluded. Cost 23 is within the signed limit of 27; hours equal the approved limit of 22. Superseded, draft, and informal evidence does not alter these limits or the prohibition.\"}",
+    "recorded_success": true,
+    "input_tokens": 951,
+    "output_tokens": 1026,
+    "reasoning_tokens": 870,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 17.455378540995298,
+      "last_visible_text_seconds": 20.280370582986507,
+      "visible_characters": 565,
+      "visible_delta_events": 150,
+      "visible_token_rate_proxy_per_second": 55.02592053358542,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-P1-high-clean-r2-sol",
+    "case_id": "XR-P1",
+    "tested_alias": "gpt-5.6-sol",
+    "effort": "high",
+    "repetition": 2,
+    "answer_text": "{\"status\":\"optimal\",\"selected\":[\"P2\",\"P3\",\"P5\",\"P8\",\"P9\"],\"objective\":62,\"checks\":{\"resource_totals\":{\"cost\":23,\"hours\":22},\"base_value\":62,\"bonus_value\":0,\"authoritative_sources\":{\"cost\":\"B2\",\"hours\":\"H2\",\"prohibited\":\"S1\"}},\"explanation\":\"The selection satisfies P8's dependencies, both at-least-one groups, and the P2/P7 exclusivity rule. P4 is excluded. Total cost and hours remain within the authoritative limits of 27 and 22.\"}",
+    "recorded_success": true,
+    "input_tokens": 951,
+    "output_tokens": 1680,
+    "reasoning_tokens": 1552,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 20.878766666995944,
+      "last_visible_text_seconds": 21.83513941700221,
+      "visible_characters": 433,
+      "visible_delta_events": 122,
+      "visible_token_rate_proxy_per_second": 133.22083463867972,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-P1-high-clean-r2-vega",
+    "case_id": "XR-P1",
+    "tested_alias": "vega-alpha",
+    "effort": "high",
+    "repetition": 2,
+    "answer_text": "{\"status\":\"optimal\",\"selected\":[\"P2\",\"P3\",\"P5\",\"P8\",\"P9\"],\"objective\":62,\"checks\":{\"resource_totals\":{\"cost\":23,\"hours\":22},\"base_value\":62,\"bonus_value\":0,\"authoritative_sources\":{\"cost\":\"B2\",\"hours\":\"H2\",\"prohibited\":\"S1\"}},\"explanation\":\"The selection satisfies all dependencies and group constraints, excludes prohibited P4, and stays within 27 cost units and 22 hours. No feasible selection exceeds value 62. B2 replaces B1; the draft and informal chat do not override approved decisions.\"}",
+    "recorded_success": true,
+    "input_tokens": 951,
+    "output_tokens": 1167,
+    "reasoning_tokens": 1034,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 20.810913665991393,
+      "last_visible_text_seconds": 23.20010295799875,
+      "visible_characters": 495,
+      "visible_delta_events": 127,
+      "visible_token_rate_proxy_per_second": 55.442499556547595,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-S1-high-clean-r1-sol",
+    "case_id": "XR-S1",
+    "tested_alias": "gpt-5.6-sol",
+    "effort": "high",
+    "repetition": 1,
+    "answer_text": "{\"status\":\"optimal\",\"starts\":{\"T1\":3,\"T2\":0,\"T3\":1,\"T4\":6,\"T5\":2,\"T6\":4,\"T7\":9},\"objective\":217,\"checks\":{\"completion_times\":{\"T1\":6,\"T2\":2,\"T3\":3,\"T4\":9,\"T5\":4,\"T6\":6,\"T7\":10},\"makespan\":10,\"weighted_completion\":217},\"explanation\":\"All precedence, window, and crew-capacity constraints are satisfied. The crew-exclusive T4 follows completion of all other predecessors, and the minimum weighted completion total is 217.\"}",
+    "recorded_success": true,
+    "input_tokens": 780,
+    "output_tokens": 7330,
+    "reasoning_tokens": 7189,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 117.85714654201001,
+      "last_visible_text_seconds": 120.10292758401192,
+      "visible_characters": 421,
+      "visible_delta_events": 135,
+      "visible_token_rate_proxy_per_second": 62.48613005731508,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-S1-high-clean-r1-vega",
+    "case_id": "XR-S1",
+    "tested_alias": "vega-alpha",
+    "effort": "high",
+    "repetition": 1,
+    "answer_text": "{\"status\":\"optimal\",\"starts\":{\"T1\":3,\"T2\":0,\"T3\":1,\"T4\":6,\"T5\":2,\"T6\":4,\"T7\":9},\"objective\":217,\"checks\":{\"completion_times\":{\"T1\":6,\"T2\":2,\"T3\":3,\"T4\":9,\"T5\":4,\"T6\":6,\"T7\":10},\"makespan\":10,\"weighted_completion\":217},\"explanation\":\"All release, precedence, deadline, and crew-capacity constraints hold. T4 uses both crew units, so every other job lies entirely before or after it. The seven precedence-consistent possibilities for which of T2,T3,T5,T6 precede T4 yield two infeasible cases and five minimum objectives: 258, 279, 249, 235, and 217. This schedule attains the smallest value.\"}",
+    "recorded_success": true,
+    "input_tokens": 780,
+    "output_tokens": 2263,
+    "reasoning_tokens": 2070,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 43.38888133400178,
+      "last_visible_text_seconds": 46.921742749997065,
+      "visible_characters": 592,
+      "visible_delta_events": 187,
+      "visible_token_rate_proxy_per_second": 54.445377365243836,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-S1-high-clean-r2-sol",
+    "case_id": "XR-S1",
+    "tested_alias": "gpt-5.6-sol",
+    "effort": "high",
+    "repetition": 2,
+    "answer_text": "{\"status\":\"optimal\",\"starts\":{\"T1\":3,\"T2\":0,\"T3\":1,\"T4\":6,\"T5\":2,\"T6\":4,\"T7\":9},\"objective\":217,\"checks\":{\"completion_times\":{\"T1\":6,\"T2\":2,\"T3\":3,\"T4\":9,\"T5\":4,\"T6\":6,\"T7\":10},\"makespan\":10,\"weighted_completion\":217},\"explanation\":\"The schedule satisfies all windows, precedences, and crew capacity. An exact case split around the crew-exclusive T4 interval establishes 217 as the minimum weighted completion total.\"}",
+    "recorded_success": true,
+    "input_tokens": 780,
+    "output_tokens": 5950,
+    "reasoning_tokens": 5810,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 97.28690020900103,
+      "last_visible_text_seconds": 98.40935204199923,
+      "visible_characters": 418,
+      "visible_delta_events": 134,
+      "visible_token_rate_proxy_per_second": 124.1301759635453,
+      "provider_decode_tokens_per_second": null
+    }
+  },
+  {
+    "run_id": "frontier-reasoning-XR-S1-high-clean-r2-vega",
+    "case_id": "XR-S1",
+    "tested_alias": "vega-alpha",
+    "effort": "high",
+    "repetition": 2,
+    "answer_text": "{\"status\":\"optimal\",\"starts\":{\"T1\":3,\"T2\":0,\"T3\":1,\"T4\":6,\"T5\":2,\"T6\":4,\"T7\":9},\"objective\":217,\"checks\":{\"completion_times\":{\"T1\":6,\"T2\":2,\"T3\":3,\"T4\":9,\"T5\":4,\"T6\":6,\"T7\":10},\"makespan\":10,\"weighted_completion\":217},\"explanation\":\"All timing, precedence, and capacity constraints hold. T4 occupies both crew units, so T6 must finish before T4 or start after it. In the first case, T4 starts at least at 6: starting at 6 forces the displayed schedule, while starting at 7 or later gives objective at least 221. In the second case, T4 starts at 3, 4, or at least 5, giving objective lower bounds 253, 249, and 233 respectively. Therefore 217 is optimal.\"}",
+    "recorded_success": true,
+    "input_tokens": 780,
+    "output_tokens": 2226,
+    "reasoning_tokens": 2011,
+    "visible_text_telemetry": {
+      "first_visible_text_seconds": 39.01783287500439,
+      "last_visible_text_seconds": 42.96369662499637,
+      "visible_characters": 655,
+      "visible_delta_events": 209,
+      "visible_token_rate_proxy_per_second": 54.32106251788775,
+      "provider_decode_tokens_per_second": null
+    }
+  }
+]
