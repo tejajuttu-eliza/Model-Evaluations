@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Codex output tokens including reasoning. Coding: Sol1674,Vega1403. Reasoning: Sol2185,Vega1622. Each3high-effort pairs,both3/3pass. Unequal runtime context; not an API-versus-Codex causal comparison.</dc:description>
+    <dc:description>Codex output tokens including reasoning. Coding: Sol 1,674, Vega 1,403. Reasoning: Sol 2,185, Vega 1,622. Three high-effort pairs in each family; both models passed all three. Unequal runtime context; not an API-versus-Codex causal comparison.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>

@@ -31,16 +31,12 @@
       "sol": {
         "input_tokens": 15279,
         "output_tokens": 6654,
-        "reasoning_tokens": 3967,
-        "reference_cost_usd": 0.205698,
-        "median_elapsed_seconds": 4.077144875001977
+        "reasoning_tokens": 3967
       },
       "vega": {
         "input_tokens": 15279,
         "output_tokens": 6565,
-        "reasoning_tokens": 3872,
-        "reference_cost_usd": 0.20391800000000002,
-        "median_elapsed_seconds": 7.927762999497645
+        "reasoning_tokens": 3872
       }
     },
     "public": {
@@ -68,16 +64,12 @@
       "sol": {
         "input_tokens": 3808,
         "output_tokens": 5656,
-        "reasoning_tokens": 2874,
-        "reference_cost_usd": 0.128352,
-        "median_elapsed_seconds": 4.357779687998118
+        "reasoning_tokens": 2874
       },
       "vega": {
         "input_tokens": 3808,
         "output_tokens": 5717,
-        "reasoning_tokens": 3098,
-        "reference_cost_usd": 0.129572,
-        "median_elapsed_seconds": 6.286286041504354
+        "reasoning_tokens": 3098
       }
     },
     "exact": {
@@ -95,17 +87,14 @@
       "sol": {
         "input_tokens": 5616,
         "output_tokens": 30679,
-        "reasoning_tokens": 29855,
-        "reference_cost_usd": 0.6332516,
-        "median_elapsed_seconds": 81.82178824950824
+        "reasoning_tokens": 29855
       },
       "vega": {
         "input_tokens": 5616,
         "output_tokens": 10968,
-        "reasoning_tokens": 9902,
-        "reference_cost_usd": 0.2390316,
-        "median_elapsed_seconds": 38.76002981250349
-      }
+        "reasoning_tokens": 9902
+      },
+      "design_detail": "3 designs with 2 repetitions each; 6 matched high-effort pairs."
     },
     "staged": {
       "pairs": 3,
@@ -119,39 +108,12 @@
       "sol": {
         "input_tokens": 503243,
         "output_tokens": 34579,
-        "reasoning_tokens": 15498,
-        "reference_cost_usd": 1.1565708,
-        "median_elapsed_seconds": 156.22174225001072
+        "reasoning_tokens": 15498
       },
       "vega": {
         "input_tokens": 810417,
         "output_tokens": 48660,
-        "reasoning_tokens": 10344,
-        "reference_cost_usd": 1.6774846,
-        "median_elapsed_seconds": 343.6693027500005
-      }
-    },
-    "cap": {
-      "pairs": 2,
-      "designs": 1,
-      "selection": "matched passing pairs",
-      "pair_ids": [
-        "cap16384-RW3-high-r1",
-        "cap16384-RW3-high-r2"
-      ],
-      "sol": {
-        "input_tokens": 134563,
-        "output_tokens": 22529,
-        "reasoning_tokens": 13131,
-        "reference_cost_usd": 0.6266536,
-        "median_elapsed_seconds": 155.57152039599168
-      },
-      "vega": {
-        "input_tokens": 103129,
-        "output_tokens": 21603,
-        "reasoning_tokens": 14118,
-        "reference_cost_usd": 0.576219,
-        "median_elapsed_seconds": 214.50217766699643
+        "reasoning_tokens": 10344
       }
     },
     "context": {
@@ -167,21 +129,14 @@
       "sol": {
         "input_tokens": 1720878,
         "output_tokens": 6979,
-        "reasoning_tokens": 3324,
-        "reference_cost_usd": 3.4820262,
-        "median_elapsed_seconds": 24.365576541997143,
-        "reference_output_cost_usd": 0.13958,
-        "reference_input_cost_usd": 3.3424462
+        "reasoning_tokens": 3324
       },
       "vega": {
         "input_tokens": 1718123,
         "output_tokens": 4957,
-        "reasoning_tokens": 1150,
-        "reference_cost_usd": 3.4318223999999997,
-        "median_elapsed_seconds": 30.940816188005556,
-        "reference_output_cost_usd": 0.09914,
-        "reference_input_cost_usd": 3.3326823999999995
-      }
+        "reasoning_tokens": 1150
+      },
+      "design_detail": "2 designs at 2 context sizes each; 4 matched high-effort pairs."
     },
     "codex_coding": {
       "pairs": 3,
@@ -195,16 +150,12 @@
       "sol": {
         "input_tokens": 222134,
         "output_tokens": 1674,
-        "reasoning_tokens": 493,
-        "reference_cost_usd": 0.1520192,
-        "median_elapsed_seconds": 16.297
+        "reasoning_tokens": 493
       },
       "vega": {
         "input_tokens": 194634,
         "output_tokens": 1403,
-        "reasoning_tokens": 391,
-        "reference_cost_usd": 0.1150966,
-        "median_elapsed_seconds": 13.619
+        "reasoning_tokens": 391
       }
     },
     "codex_reasoning": {
@@ -219,31 +170,16 @@
       "sol": {
         "input_tokens": 222281,
         "output_tokens": 2185,
-        "reasoning_tokens": 1416,
-        "reference_cost_usd": 0.16282719999999998,
-        "median_elapsed_seconds": 13.212
+        "reasoning_tokens": 1416
       },
       "vega": {
         "input_tokens": 194754,
         "output_tokens": 1622,
-        "reasoning_tokens": 844,
-        "reference_cost_usd": 0.1200766,
-        "median_elapsed_seconds": 12.795
+        "reasoning_tokens": 844
       }
     }
   },
-  "cost_chart_method": "Provider-reference input component is total reference cost minus output tokens at $20 per million; input includes ordinary and cache traffic at the recorded shared rate scenario.",
   "history_note": "The illustrated public scope excludes48historicalFDE-labeled candidates. The complete412-candidate ledger is preserved separately; this deck covers364candidates.",
-  "quality": {
-    "sol": {
-      "assigned": 100,
-      "passed": 100
-    },
-    "vega": {
-      "assigned": 100,
-      "passed": 98
-    }
-  },
   "public_scope": {
     "source_file": "../evidence/data/presentation-scope.json",
     "source_sha256": "1058a41d38bc652024b41e368c210ea0bf2b8afdc55240726fc863eeea6ef876",
@@ -288,7 +224,8 @@
         "pairs": 161
       }
     },
-    "token_definition": "Recorded input plus output, including cached and repeated context; not generated tokens alone, unique corpus size, internal compute, or actual billed expenditure.",
+    "token_definition": "Recorded input plus output, including cached and repeated context; not generated tokens alone, unique corpus size or internal compute.",
     "classification": "Exclude rows whose existing lane label is exactly fde or synthetic-FDE. This is a taxonomy filter, not a retrospective semantic relabeling of tasks."
-  }
+  },
+  "presentation_note": "Selected efficiency highlights with matched passing outcomes. Results vary by task family. The complete outcomes remain in the separate evidence package."
 }

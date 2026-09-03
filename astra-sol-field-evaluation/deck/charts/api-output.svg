@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Vega output relative to Sol at high effort. Exact reasoning minus64.2%; earlier technical API minus1.3%; public coding plus1.1%; staged repositories plus40.7%. Separate task families; output includes reasoning.</dc:description>
+    <dc:description>Vega output relative to Sol at high effort. Exact reasoning -64.2%; earlier technical API -1.3%; public coding +1.1%; staged repositories +40.7%. Separate task families; output includes reasoning.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -898,14 +898,14 @@ z
    </g>
   </g>
   <g id="text_3">
-   <!-- −64.2% -->
-   <g style="fill: #3a3a3a" transform="translate(734.09411 55.871738) scale(0.25 -0.25)">
+   <!-- -64.2% -->
+   <g style="fill: #3a3a3a" transform="translate(739.28161 55.871738) scale(0.25 -0.25)">
     <defs>
-     <path id="Inter-SemiBold-5fe" d="M 3697 2687
-L 3697 1975
-L 613 1975
-L 613 2687
-L 3697 2687
+     <path id="Inter-SemiBold-5bd" d="M 2534 2659
+L 2534 1987
+L 441 1987
+L 441 2659
+L 2534 2659
 z
 " transform="scale(0.015625)"/>
      <path id="Inter-SemiBold-543" d="M 2097 -63
@@ -1078,12 +1078,12 @@ L 1294 0
 z
 " transform="scale(0.015625)"/>
     </defs>
-    <use xlink:href="#Inter-SemiBold-5fe"/>
-    <use xlink:href="#Inter-SemiBold-543" transform="translate(67.28125 0)"/>
-    <use xlink:href="#Inter-SemiBold-540" transform="translate(131.25 0)"/>
-    <use xlink:href="#Inter-SemiBold-5dc" transform="translate(194.484375 0)"/>
-    <use xlink:href="#Inter-SemiBold-53d" transform="translate(226.375 0)"/>
-    <use xlink:href="#Inter-SemiBold-6b2" transform="translate(288.6875 0)"/>
+    <use xlink:href="#Inter-SemiBold-5bd"/>
+    <use xlink:href="#Inter-SemiBold-543" transform="translate(46.53125 0)"/>
+    <use xlink:href="#Inter-SemiBold-540" transform="translate(110.5 0)"/>
+    <use xlink:href="#Inter-SemiBold-5dc" transform="translate(173.734375 0)"/>
+    <use xlink:href="#Inter-SemiBold-53d" transform="translate(205.625 0)"/>
+    <use xlink:href="#Inter-SemiBold-6b2" transform="translate(267.9375 0)"/>
    </g>
   </g>
   <g id="text_4">
@@ -1329,8 +1329,8 @@ z
    </g>
   </g>
   <g id="text_6">
-   <!-- −1.3% -->
-   <g style="fill: #3a3a3a" transform="translate(755.605829 93.986738) scale(0.25 -0.25)">
+   <!-- -1.3% -->
+   <g style="fill: #3a3a3a" transform="translate(760.793329 93.986738) scale(0.25 -0.25)">
     <defs>
      <path id="Inter-SemiBold-53c" d="M 2241 4656
 L 2241 0
@@ -1388,11 +1388,11 @@ Q 2534 -63 2034 -63
 z
 " transform="scale(0.015625)"/>
     </defs>
-    <use xlink:href="#Inter-SemiBold-5fe"/>
-    <use xlink:href="#Inter-SemiBold-53c" transform="translate(67.28125 0)"/>
-    <use xlink:href="#Inter-SemiBold-5dc" transform="translate(109.5625 0)"/>
-    <use xlink:href="#Inter-SemiBold-53f" transform="translate(139.015625 0)"/>
-    <use xlink:href="#Inter-SemiBold-6b2" transform="translate(202.640625 0)"/>
+    <use xlink:href="#Inter-SemiBold-5bd"/>
+    <use xlink:href="#Inter-SemiBold-53c" transform="translate(46.53125 0)"/>
+    <use xlink:href="#Inter-SemiBold-5dc" transform="translate(88.8125 0)"/>
+    <use xlink:href="#Inter-SemiBold-53f" transform="translate(118.265625 0)"/>
+    <use xlink:href="#Inter-SemiBold-6b2" transform="translate(181.890625 0)"/>
    </g>
   </g>
   <g id="text_7">

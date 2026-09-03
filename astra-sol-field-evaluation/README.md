@@ -2,7 +2,7 @@
 
 By Teja Juttu, Lead FDE at Eliza. September 2026.
 
-**The task decides the upgrade.** The clearest local result was lower output-token usage on exact constraint reasoning. That advantage did not generalize to every task: high-effort staged coding used more output, and the earlier broad API objective set was approximately flat.
+**Selected early-access highlights: less output on reasoning, Codex coding and long-context tasks.** The clearest local result was 64.2% fewer output tokens on exact constraint reasoning, with both models passing the same six runs. The deck focuses on supported positives and keeps task-dependent results visible; the complete historical evidence remains available below.
 
 The public presentation focuses on general technical tasks and excludes the historically labeled FDE lanes: **364 candidate attempts / 182 matched pairs, with 18,419,092 recorded input + output tokens across both models**. This includes repeated and cached input; it is not a count of generated tokens or an all-in project bill. The [presentation scope](evidence/data/presentation-scope.json) records the filter and exact subtotals. The complete 412-candidate historical ledger remains available for audit.
 
@@ -31,19 +31,22 @@ python3 -B evidence/verify_package.py
 
 These commands make no API calls and execute no model-generated code. See the evidence README for the separate optional staged-code replay.
 
-Standalone SVG and PNG versions of the five charts are included under `deck/charts/`. To regenerate them from the bundled data, run `python3 deck/build_charts.py` with Matplotlib installed, then `python3 deck/build_deck.py`. The chart manifest records the Matplotlib version and source-data hash. Viewing the HTML and PDF requires no Python packages.
+Standalone SVG and PNG versions of the four charts are included under `deck/charts/`. To regenerate them from the bundled data, run `python3 deck/build_charts.py` with Matplotlib installed, then `python3 deck/build_deck.py`. The chart manifest records the Matplotlib version and source-data hash. Viewing the HTML and PDF requires no Python packages.
 
 ## Results at a glance
 
 All changes below are early-access Vega output relative to Sol. Output includes reported reasoning tokens once. Each row has its own high-effort protocol and task scope.
 
-| API comparison | Designs / pairs | Passed Sol / Vega | Output change |
+| Surface / comparison | Designs / pairs | Passed Sol / Vega | Output change |
 |---|---:|---:|---:|
-| Exact constraint reasoning | 3 / 6 | 6/6 / 6/6 | 64.2% less |
-| Staged repository changes, clean | 3 / 3 | 3/3 / 3/3 | 40.7% more |
-| Earlier objective technical packets, FDE case excluded | 14 / 14 | 14/14 / 14/14 | 1.3% less |
+| API: exact constraint reasoning | 3 / 6 | 6/6 / 6/6 | 64.2% less |
+| API: long-context tasks | 2 / 4 | 4/4 / 4/4 | 29.0% less |
+| Codex: coding packets | 3 / 3 | 3/3 / 3/3 | 16.2% less |
+| Codex: reasoning packets | 3 / 3 | 3/3 / 3/3 | 25.8% less |
+| API: staged repository changes, clean | 3 / 3 | 3/3 / 3/3 | 40.7% more |
+| API: earlier objective technical packets, FDE case excluded | 14 / 14 | 14/14 / 14/14 | 1.3% less |
 
-The expanded 200-attempt campaign spans several efforts and task families: Sol passes 100/100 and Vega 98/100 under its frozen checks. These are fixture outcomes, not production acceptance rates. Both Vega failures occur on one repository design at high/xhigh effort under the response budget.
+Long-context pairs cover two designs at two context sizes. The selected passing-pair comparisons above do not imply equal success across the full campaign. All assigned outcomes, including response-cap failures and later follow-up runs, remain in the [complete evidence](evidence/README.md). These are fixture outcomes, not production acceptance rates.
 
 ## Keep the boundaries visible
 
@@ -51,7 +54,8 @@ The expanded 200-attempt campaign spans several efforts and task families: Sol p
 - **Same effort is a setting, not equal compute.** Prompt/tool settings are documented per cohort; Codex runtime context and cache behavior are not fully controlled. An API/Codex comparison is descriptive, not a causal estimate of the interface.
 - **Repeated attempts are not new designs.** Do not turn 412 candidate records into 412 independent tests. Task selection was exploratory and the groups are heterogeneous.
 - **Quality and efficiency have different denominators.** Matched-success ratios condition on both candidates passing. All-attempt accounting retains failures; unknown grades and missing usage remain unknown. Grader amendments are identified in the evidence.
-- **Tokens are not actual bills.** Reference costs apply a stated common Sol-price scenario to both models. Actual early-access billing, human review and repair time, and full orchestration cost were not established.
+- **Pricing was not established.** The deck and post show output-token measurements without dollar estimates. Historical common-rate scenarios remain labeled in the evidence and are not actual Astra charges.
+- **Early-access latency is not a GA speed ranking.** Serving conditions may affect elapsed time. The study did not isolate infrastructure from model behavior, so neither a speed conclusion nor an infrastructure explanation is established.
 - **Reproducibility has a declared scope.** The package supports offline recalculation of exported measurements and selected synthetic examples. It is not a release of every original session, runtime instruction or model-serving environment, and it cannot recreate historical model draws. See the evidence README for the exact executable checks and omitted material.
 
 The strongest operational use of these results is to select a representative workflow, fix its acceptance criteria, and measure correctness, all invoked resources, latency and human rework before choosing a model default.

@@ -2,64 +2,64 @@
   {
     "key": "cover",
     "eyebrow": "GPT-6 Astra vs GPT-5.6 Sol",
-    "title": "The task decides<br>the <em>upgrade.</em>",
-    "note": "Input + output, including cached context, across both models. Early-access Vega-alpha vs GPT-5.6 Sol; not a launch-version retest. Attempts are not independent designs.",
+    "title": "The early signals<br>are <em>promising.</em>",
+    "note": "Input + output, including cached and repeated context, across both models. Tested Vega-alpha, now named GPT-6 Astra. Selected exploratory findings; results vary by task.",
     "sources": "Companion evidence package \u00b7 scope and model provenance",
     "cls": "cover"
   },
   {
-    "key": "api-results",
-    "eyebrow": "Direct API \u00b7 Vega output relative to Sol",
-    "title": "One model.<br><em>Opposite</em> token results.",
-    "note": "Matched passing pairs; change in summed output tokens, including reasoning. Separate task families, not a pooled model effect. Repeats are not new designs.",
-    "sources": "Companion evidence package \u00b7 API claims and candidate ledger",
+    "key": "exact",
+    "eyebrow": "Direct API \u00b7 Exact constraint reasoning",
+    "title": "Exact reasoning.<br><em>64.2% fewer output tokens.</em>",
+    "note": "Matched passing pairs; change in summed output tokens, including reasoning. Three designs with two repetitions each. Same configured effort does not imply equal compute.",
+    "sources": "Companion evidence package \u00b7 exact reasoning claims and candidate ledger",
     "cls": ""
   },
   {
     "key": "surfaces",
-    "eyebrow": "Separate evidence surfaces",
-    "title": "API and Codex need<br><em>separate readouts.</em>",
-    "note": "FDE-specific lanes excluded; full historical ledger preserved. Codex used synthetic packet tasks with unequal runtime inputs. Different tasks and runtime context prevent an API-versus-Codex causal comparison.",
+    "eyebrow": "API and Codex \u00b7 Separate evidence surfaces",
+    "title": "Efficiency signals<br><em>in Codex, too.</em>",
+    "note": "Codex used synthetic packet tasks with unequal runtime inputs. These selected high-effort comparisons are separate from API results; different tasks and context prevent a causal comparison between surfaces.",
     "sources": "Companion evidence package \u00b7 surface inventory and Codex strata",
     "cls": ""
   },
   {
-    "key": "quality",
-    "eyebrow": "Quality before efficiency",
-    "title": "Token efficiency matters<br><em>after it works.</em>",
-    "note": "200 assigned attempts across 22 selected designs and multiple effort settings. Both failures were one repository design at high / xhigh. This is not established production-quality equivalence.",
-    "sources": "Companion evidence package \u00b7 primary outcomes and failure ledger",
+    "key": "context",
+    "eyebrow": "Direct API \u00b7 Multi-turn long context",
+    "title": "Long context.<br><em>29.0% fewer output tokens.</em>",
+    "note": "High vs high \u00b7 2 designs at nominal 96k and 192k context sizes \u00b7 4 passing pairs. This comparison is output only, including reasoning; input and cached context are excluded.",
+    "sources": "Companion evidence package \u00b7 long-context candidates and usage",
     "cls": ""
   },
   {
-    "key": "recent",
-    "eyebrow": "Recent completed follow-up",
-    "title": "The advantage can<br><em>get small.</em>",
-    "note": "Fresh attempts used a larger budget, longer timeout and serial execution. Recovery does not prove the old cap caused the failures. Time is median end-to-end elapsed time, not decoding speed.",
-    "sources": "Companion evidence package \u00b7 response-budget follow-up",
+    "key": "delegation",
+    "eyebrow": "Practitioner observations \u00b7 Codex",
+    "title": "A more natural<br><em>delegation workflow.</em>",
+    "note": "Qualitative reports from Eliza engineers, not a measured benchmark result. The candidate harness assigned scoped tasks; it did not measure autonomous subagent usage or coordination.",
+    "sources": "Eliza practitioner observations \u00b7 engineering feedback supplied for this evaluation",
     "cls": ""
   },
   {
-    "key": "economics",
-    "eyebrow": "Task economics",
-    "title": "Measure the full<br><em>cost of the task.</em>",
-    "note": "High \u00b7 2 designs \u00b7 4 passing pairs. Shared Sol-rate scenario; Vega pricing was unverified. Provider calls only: review, tool hosting and orchestration costs are excluded.",
-    "sources": "Companion evidence package \u00b7 cost formula, input/cache/output accounting",
+    "key": "task-fit",
+    "eyebrow": "Direct API \u00b7 Vega output relative to Sol",
+    "title": "Match the model<br><em>to the task.</em>",
+    "note": "Matched passing pairs; summed output tokens, including reasoning. These are separate task families, not a pooled effect. Efficiency gains vary by workload; repeats are not new designs.",
+    "sources": "Companion evidence package \u00b7 API claims and candidate ledger",
     "cls": ""
   },
   {
     "key": "evidence",
     "eyebrow": "An inspectable evaluation",
     "title": "The evidence should<br><em>travel with the claim.</em>",
-    "note": "Small exploratory samples and repeated designs cannot establish a universal model ranking. The package separates candidate outcomes, measurement boundaries and public-release limitations.",
+    "note": "Small exploratory samples and repeated designs cannot establish a universal ranking. Full outcomes, retries and measurement limits remain in the evidence package. Early-access results are not a GA retest.",
     "sources": "Companion evidence package \u00b7 methodology, claims, candidates and strata",
     "cls": ""
   },
   {
     "key": "takeaway",
-    "eyebrow": "What this changes for delivery",
-    "title": "Test the workflow.<br><em>Then choose the model.</em>",
-    "note": "An early-access field study of Vega-alpha and GPT-5.6 Sol. The next decision should use your own acceptance criteria and current deployed versions.",
+    "eyebrow": "What we are excited to explore next",
+    "title": "More room<br>to <em>build.</em>",
+    "note": "An early-access field study of Vega-alpha and GPT-5.6 Sol. Evaluate your own acceptance criteria and current deployed versions before generalizing these selected findings.",
     "sources": "Eliza \u00b7 technical delivery and model evaluation",
     "cls": "closing"
   }
