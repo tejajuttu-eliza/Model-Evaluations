@@ -2,32 +2,32 @@
   {
     "key": "cover",
     "eyebrow": "GPT-6 Astra vs GPT-5.6 Sol",
-    "title": "The early signals<br>are <em>promising.</em>",
-    "note": "Input + output, including cached and repeated context, across both models. Tested Vega-alpha, now named GPT-6 Astra. Selected exploratory findings; results vary by task.",
+    "title": "Where Astra improves<br><em>on Sol.</em>",
+    "note": "Recorded tokens include input, output and cached/repeated context across both models. Vega-alpha is the early-access model; results vary by task.",
     "sources": "Companion evidence package \u00b7 scope and model provenance",
     "cls": "cover"
   },
   {
     "key": "exact",
-    "eyebrow": "Direct API \u00b7 Exact constraint reasoning",
+    "eyebrow": "API \u00b7 Astra vs Sol \u00b7 Exact reasoning",
     "title": "Exact reasoning.<br><em>64.2% fewer output tokens.</em>",
-    "note": "Matched passing pairs; change in summed output tokens, including reasoning. Three designs with two repetitions each. Same configured effort does not imply equal compute.",
+    "note": "Summed output includes reasoning. Small exploratory sample; the same effort setting does not imply equal compute.",
     "sources": "Companion evidence package \u00b7 exact reasoning claims and candidate ledger",
     "cls": ""
   },
   {
     "key": "surfaces",
     "eyebrow": "API and Codex \u00b7 Separate evidence surfaces",
-    "title": "Efficiency signals<br><em>in Codex, too.</em>",
-    "note": "Codex used synthetic packet tasks with unequal runtime inputs. These selected high-effort comparisons are separate from API results; different tasks and context prevent a causal comparison between surfaces.",
+    "title": "Less output than Sol.<br><em>In Codex, too.</em>",
+    "note": "Synthetic packet tasks; runtime context differed by model. Read these results separately from the API tests.",
     "sources": "Companion evidence package \u00b7 surface inventory and Codex strata",
     "cls": ""
   },
   {
     "key": "context",
-    "eyebrow": "Direct API \u00b7 Multi-turn long context",
+    "eyebrow": "API \u00b7 Astra vs Sol \u00b7 Long context",
     "title": "Long context.<br><em>29.0% fewer output tokens.</em>",
-    "note": "High vs high \u00b7 2 designs at nominal 96k and 192k context sizes \u00b7 4 passing pairs. This comparison is output only, including reasoning; input and cached context are excluded.",
+    "note": "Nominal 96k and 192k context sizes. Output includes reasoning; input and cached context are excluded from this comparison.",
     "sources": "Companion evidence package \u00b7 long-context candidates and usage",
     "cls": ""
   },
@@ -35,15 +35,15 @@
     "key": "delegation",
     "eyebrow": "Practitioner observations \u00b7 Codex",
     "title": "A more natural<br><em>delegation workflow.</em>",
-    "note": "Qualitative reports from Eliza engineers, not a measured benchmark result. The candidate harness assigned scoped tasks; it did not measure autonomous subagent usage or coordination.",
+    "note": "Qualitative Eliza engineering feedback. Autonomous delegation and coordination were not measured in the benchmark.",
     "sources": "Eliza practitioner observations \u00b7 engineering feedback supplied for this evaluation",
     "cls": ""
   },
   {
     "key": "task-fit",
-    "eyebrow": "Direct API \u00b7 Vega output relative to Sol",
+    "eyebrow": "Direct API \u00b7 Astra output relative to Sol",
     "title": "Match the model<br><em>to the task.</em>",
-    "note": "Matched passing pairs; summed output tokens, including reasoning. These are separate task families, not a pooled effect. Efficiency gains vary by workload; repeats are not new designs.",
+    "note": "Separate task families and matched passing pairs. Output includes reasoning. Gains vary by workload; repeats are not new designs.",
     "sources": "Companion evidence package \u00b7 API claims and candidate ledger",
     "cls": ""
   },
@@ -51,15 +51,15 @@
     "key": "evidence",
     "eyebrow": "An inspectable evaluation",
     "title": "The evidence should<br><em>travel with the claim.</em>",
-    "note": "Small exploratory samples and repeated designs cannot establish a universal ranking. Full outcomes, retries and measurement limits remain in the evidence package. Early-access results are not a GA retest.",
+    "note": "Full outcomes, retries and limits are linked. Small exploratory samples and repeated runs do not establish a universal ranking.",
     "sources": "Companion evidence package \u00b7 methodology, claims, candidates and strata",
     "cls": ""
   },
   {
     "key": "takeaway",
     "eyebrow": "What we are excited to explore next",
-    "title": "More room<br>to <em>build.</em>",
-    "note": "An early-access field study of Vega-alpha and GPT-5.6 Sol. Evaluate your own acceptance criteria and current deployed versions before generalizing these selected findings.",
+    "title": "A promising upgrade.<br><em>For the right tasks.</em>",
+    "note": "Validate the current models on your own tasks and acceptance criteria before generalizing these early-access findings.",
     "sources": "Eliza \u00b7 technical delivery and model evaluation",
     "cls": "closing"
   }

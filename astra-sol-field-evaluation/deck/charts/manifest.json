@@ -5,23 +5,23 @@
   "charts": [
     {
       "name": "exact-output",
-      "description": "Exact constraint reasoning output: Sol 30,679, Vega 10,968; 64.2% fewer Vega output tokens including reasoning. Three designs with two repetitions each; six high-effort pairs; both models passed all six.",
-      "svg_sha256": "9847ced687b81ee76e9078762b1ca2868624f78674de0d2042c360b2d8edf2b6"
+      "description": "Exact constraint reasoning output: Sol 30,679, Astra 10,968; 64.2% fewer Astra output tokens including reasoning. Three designs with two repetitions each; six high-effort pairs; both models passed all six.",
+      "svg_sha256": "2ac55f7d62debdd1acf882aa0f2df17592dd4456c31719d847cbd34e05956860"
     },
     {
       "name": "long-context-output",
-      "description": "Long-context output: Sol 6,979, Vega 4,957; 29.0% fewer Vega output tokens including reasoning. Two designs at two context sizes; four high-effort pairs; both models passed all four. Input and cached context excluded from this comparison.",
-      "svg_sha256": "f1e8991d428593d0589c1048118004ba7d50c787519cd78a100f28acfeb2f0e0"
+      "description": "Long-context output: Sol 6,979, Astra 4,957; 29.0% fewer Astra output tokens including reasoning. Two designs at two context sizes; four high-effort pairs; both models passed all four. Input and cached context excluded from this comparison.",
+      "svg_sha256": "0f4722a72bbf413268065d16ee4ed966451bc7aa223ee770195d6f40ed10b5e5"
     },
     {
       "name": "codex-output",
-      "description": "Codex output tokens including reasoning. Coding: Sol 1,674, Vega 1,403. Reasoning: Sol 2,185, Vega 1,622. Three high-effort pairs in each family; both models passed all three. Unequal runtime context; not an API-versus-Codex causal comparison.",
-      "svg_sha256": "13c6b5c28a722029db282172232ae4d126404443bfe79f20b4175bf18be8127f"
+      "description": "Codex output tokens including reasoning. Coding: Sol 1,674, Astra 1,403. Reasoning: Sol 2,185, Astra 1,622. Three high-effort pairs in each family; both models passed all three. Unequal runtime context; not an API-versus-Codex causal comparison.",
+      "svg_sha256": "7b6d56b26737a9f980f6ea2f5890fb02ae5ab48f2daed7d8e1d12b8378820638"
     },
     {
       "name": "api-output",
-      "description": "Vega output relative to Sol at high effort. Exact reasoning -64.2%; earlier technical API -1.3%; public coding +1.1%; staged repositories +40.7%. Separate task families; output includes reasoning.",
-      "svg_sha256": "de43da893a7211d673a8027aed50f1852be661fd8bf12fd4340aa7864f72b54c"
+      "description": "Astra output relative to Sol at high effort. Exact reasoning -64.2%; earlier technical API -1.3%; public coding +1.1%; staged repositories +40.7%. Separate task families; output includes reasoning.",
+      "svg_sha256": "2a65880e94926a2041cc8cbc9af57cf2f12dfa89091c6d4446511fa5c4f90bff"
     }
   ]
 }

@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:description>Vega output relative to Sol at high effort. Exact reasoning -64.2%; earlier technical API -1.3%; public coding +1.1%; staged repositories +40.7%. Separate task families; output includes reasoning.</dc:description>
+    <dc:description>Astra output relative to Sol at high effort. Exact reasoning -64.2%; earlier technical API -1.3%; public coding +1.1%; staged repositories +40.7%. Separate task families; output includes reasoning.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -1946,7 +1946,7 @@ z
    </g>
   </g>
   <g id="text_13">
-   <!-- Fewer Vega tokens -->
+   <!-- Fewer Astra tokens -->
    <g style="fill: #3a3a3a" transform="translate(360.3744 18.34) scale(0.128 -0.128)">
     <defs>
      <path id="Inter-Regular-89" d="M 563 0
@@ -1962,19 +1962,25 @@ L 1156 0
 L 563 0
 z
 " transform="scale(0.015625)"/>
-     <path id="Inter-Regular-1c8" d="M 1875 0
-L 163 4656
-L 788 4656
-L 1772 1894
-Q 1856 1656 1982 1259
-Q 2109 863 2278 281
-L 2163 281
-Q 2331 878 2456 1267
-Q 2581 1656 2663 1894
-L 3622 4656
-L 4253 4656
-L 2559 0
-L 1875 0
+     <path id="Inter-Regular-2" d="M 163 0
+L 1853 4656
+L 2541 4656
+L 4253 0
+L 3628 0
+L 2641 2763
+Q 2550 3019 2429 3401
+Q 2309 3784 2138 4378
+L 2250 4378
+Q 2081 3778 1957 3389
+Q 1834 3000 1753 2763
+L 794 0
+L 163 0
+z
+M 1013 1300
+L 1013 1819
+L 3403 1819
+L 3403 1300
+L 1013 1300
 z
 " transform="scale(0.015625)"/>
      <path id="Inter-Regular-378" d="M 1869 3494
@@ -2005,22 +2011,23 @@ z
     <use xlink:href="#Inter-Regular-266" transform="translate(191.59375 0)"/>
     <use xlink:href="#Inter-Regular-354" transform="translate(249.890625 0)"/>
     <use xlink:href="#Inter-Regular-6d3" transform="translate(287.53125 0)"/>
-    <use xlink:href="#Inter-Regular-1c8" transform="translate(315.65625 0)"/>
-    <use xlink:href="#Inter-Regular-266" transform="translate(379.578125 0)"/>
-    <use xlink:href="#Inter-Regular-292" transform="translate(437.875 0)"/>
-    <use xlink:href="#Inter-Regular-1fb" transform="translate(499.203125 0)"/>
-    <use xlink:href="#Inter-Regular-6d3" transform="translate(555.359375 0)"/>
-    <use xlink:href="#Inter-Regular-378" transform="translate(583.484375 0)"/>
-    <use xlink:href="#Inter-Regular-316" transform="translate(615.234375 0)"/>
-    <use xlink:href="#Inter-Regular-2d7" transform="translate(675.203125 0)"/>
-    <use xlink:href="#Inter-Regular-266" transform="translate(727.84375 0)"/>
-    <use xlink:href="#Inter-Regular-305" transform="translate(786.140625 0)"/>
-    <use xlink:href="#Inter-Regular-367" transform="translate(845.21875 0)"/>
+    <use xlink:href="#Inter-Regular-2" transform="translate(315.65625 0)"/>
+    <use xlink:href="#Inter-Regular-367" transform="translate(384.65625 0)"/>
+    <use xlink:href="#Inter-Regular-378" transform="translate(437.4375 0)"/>
+    <use xlink:href="#Inter-Regular-354" transform="translate(470.15625 0)"/>
+    <use xlink:href="#Inter-Regular-1fb" transform="translate(507.796875 0)"/>
+    <use xlink:href="#Inter-Regular-6d3" transform="translate(563.953125 0)"/>
+    <use xlink:href="#Inter-Regular-378" transform="translate(592.078125 0)"/>
+    <use xlink:href="#Inter-Regular-316" transform="translate(623.828125 0)"/>
+    <use xlink:href="#Inter-Regular-2d7" transform="translate(683.796875 0)"/>
+    <use xlink:href="#Inter-Regular-266" transform="translate(736.4375 0)"/>
+    <use xlink:href="#Inter-Regular-305" transform="translate(794.734375 0)"/>
+    <use xlink:href="#Inter-Regular-367" transform="translate(853.8125 0)"/>
    </g>
   </g>
   <g id="text_14">
-   <!-- More Vega tokens -->
-   <g style="fill: #3a3a3a" transform="translate(611.3028 18.34) scale(0.128 -0.128)">
+   <!-- More Astra tokens -->
+   <g style="fill: #3a3a3a" transform="translate(610.2028 18.34) scale(0.128 -0.128)">
     <defs>
      <path id="Inter-Regular-124" d="M 563 0
 L 563 4656
@@ -2071,17 +2078,18 @@ z
     <use xlink:href="#Inter-Regular-354" transform="translate(150.296875 0)"/>
     <use xlink:href="#Inter-Regular-266" transform="translate(186.28125 0)"/>
     <use xlink:href="#Inter-Regular-6d3" transform="translate(244.578125 0)"/>
-    <use xlink:href="#Inter-Regular-1c8" transform="translate(272.703125 0)"/>
-    <use xlink:href="#Inter-Regular-266" transform="translate(336.625 0)"/>
-    <use xlink:href="#Inter-Regular-292" transform="translate(394.921875 0)"/>
-    <use xlink:href="#Inter-Regular-1fb" transform="translate(456.25 0)"/>
-    <use xlink:href="#Inter-Regular-6d3" transform="translate(512.40625 0)"/>
-    <use xlink:href="#Inter-Regular-378" transform="translate(540.53125 0)"/>
-    <use xlink:href="#Inter-Regular-316" transform="translate(572.28125 0)"/>
-    <use xlink:href="#Inter-Regular-2d7" transform="translate(632.25 0)"/>
-    <use xlink:href="#Inter-Regular-266" transform="translate(684.890625 0)"/>
-    <use xlink:href="#Inter-Regular-305" transform="translate(743.1875 0)"/>
-    <use xlink:href="#Inter-Regular-367" transform="translate(802.265625 0)"/>
+    <use xlink:href="#Inter-Regular-2" transform="translate(272.703125 0)"/>
+    <use xlink:href="#Inter-Regular-367" transform="translate(341.703125 0)"/>
+    <use xlink:href="#Inter-Regular-378" transform="translate(394.484375 0)"/>
+    <use xlink:href="#Inter-Regular-354" transform="translate(427.203125 0)"/>
+    <use xlink:href="#Inter-Regular-1fb" transform="translate(464.84375 0)"/>
+    <use xlink:href="#Inter-Regular-6d3" transform="translate(521 0)"/>
+    <use xlink:href="#Inter-Regular-378" transform="translate(549.125 0)"/>
+    <use xlink:href="#Inter-Regular-316" transform="translate(580.875 0)"/>
+    <use xlink:href="#Inter-Regular-2d7" transform="translate(640.84375 0)"/>
+    <use xlink:href="#Inter-Regular-266" transform="translate(693.484375 0)"/>
+    <use xlink:href="#Inter-Regular-305" transform="translate(751.78125 0)"/>
+    <use xlink:href="#Inter-Regular-367" transform="translate(810.859375 0)"/>
    </g>
   </g>
  </g>

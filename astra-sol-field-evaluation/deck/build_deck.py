@@ -28,36 +28,36 @@ def plot(name, alt, css=''):
 
 slides = []
 slides.append(slide('cover', 'GPT-6 Astra vs GPT-5.6 Sol',
-    'The early signals<br>are <em>promising.</em>',
-    '<p class="cover-lede">Selected highlights from our<br>API and Codex evaluations at Eliza.</p>'
+    'Where Astra improves<br><em>on Sol.</em>',
+    '<p class="cover-lede">Selected early-access results from our<br>API and Codex evaluations at Eliza.</p>'
     '<p class="cover-scope"><b>364 candidate attempts</b> · <b>18.4M recorded tokens</b></p>'
     '<p class="cover-author">Early access, real experiments · Teja</p>',
-    'Input + output, including cached and repeated context, across both models. Tested Vega-alpha, now named GPT-6 Astra. Selected exploratory findings; results vary by task.',
+    'Recorded tokens include input, output and cached/repeated context across both models. Vega-alpha is the early-access model; results vary by task.',
     'Companion evidence package · scope and model provenance', 'cover'))
 
 exact = plot('exact-output',
-    'Exact reasoning output tokens: Sol 30,679; Vega 10,968. Vega used 64.2% fewer output tokens, including reasoning. Three designs with two repetitions each; six high-effort pairs; both models passed all six.')
-exact += '<p class="large-note">Same acceptance checks. <b>Both models passed every run in this slice.</b></p>'
-slides.append(slide('exact', 'Direct API · Exact constraint reasoning',
+    'Exact reasoning output tokens: Sol 30,679; Astra 10,968. Astra used 64.2% fewer output tokens, including reasoning. Three designs with two repetitions each; six high-effort pairs; both models passed all six.')
+exact += '<p class="large-note">Compared with Sol. <b>The same acceptance checks passed.</b></p>'
+slides.append(slide('exact', 'API · Astra vs Sol · Exact reasoning',
     f'Exact reasoning.<br><em>{metric("exact"):.1f}% fewer output tokens.</em>', exact,
-    'Matched passing pairs; change in summed output tokens, including reasoning. Three designs with two repetitions each. Same configured effort does not imply equal compute.',
+    'Summed output includes reasoning. Small exploratory sample; the same effort setting does not imply equal compute.',
     'Companion evidence package · exact reasoning claims and candidate ledger'))
 
 codex = ('<p class="scope-line">Public comparison scope: <b>322 API attempts</b> · <b>42 Codex assignments</b></p>'
-    '<p class="plot-kicker">Within Codex · output tokens including reasoning · Vega vs Sol</p>' +
+    '<p class="plot-kicker">Astra vs Sol · Output tokens, including reasoning</p>' +
     plot('codex-output',
-    'Codex coding: Sol 1,674 output tokens, Vega 1,403, 16.2% less. Codex reasoning: Sol 2,185, Vega 1,622, 25.8% less. Three high-effort pairs per family; both models passed all three.', 'codex-plot'))
+    'Codex coding: Sol 1,674 output tokens, Astra 1,403, 16.2% less. Codex reasoning: Sol 2,185, Astra 1,622, 25.8% less. Three high-effort pairs per family; both models passed all three.', 'codex-plot'))
 slides.append(slide('surfaces', 'API and Codex · Separate evidence surfaces',
-    'Efficiency signals<br><em>in Codex, too.</em>', codex,
-    'Codex used synthetic packet tasks with unequal runtime inputs. These selected high-effort comparisons are separate from API results; different tasks and context prevent a causal comparison between surfaces.',
+    'Less output than Sol.<br><em>In Codex, too.</em>', codex,
+    'Synthetic packet tasks; runtime context differed by model. Read these results separately from the API tests.',
     'Companion evidence package · surface inventory and Codex strata'))
 
 context = plot('long-context-output',
-    'Long-context output tokens: Sol 6,979; Vega 4,957. Vega used 29.0% fewer output tokens including reasoning. Two designs at two context sizes; four high-effort pairs; both models passed all four.')
+    'Long-context output tokens: Sol 6,979; Astra 4,957. Astra used 29.0% fewer output tokens including reasoning. Two designs at two context sizes; four high-effort pairs; both models passed all four.')
 context += '<p class="large-note"><b>Both models passed</b> across the two context sizes.</p>'
-slides.append(slide('context', 'Direct API · Multi-turn long context',
+slides.append(slide('context', 'API · Astra vs Sol · Long context',
     f'Long context.<br><em>{metric("context"):.1f}% fewer output tokens.</em>', context,
-    'High vs high · 2 designs at nominal 96k and 192k context sizes · 4 passing pairs. This comparison is output only, including reasoning; input and cached context are excluded.',
+    'Nominal 96k and 192k context sizes. Output includes reasoning; input and cached context are excluded from this comparison.',
     'Companion evidence package · long-context candidates and usage'))
 
 delegation = ('<p class="observation-lede">Eliza teammates described Astra using<br>'
@@ -68,15 +68,15 @@ delegation = ('<p class="observation-lede">Eliza teammates described Astra using
     '<p class="observation-label">A practitioner signal worth testing next.</p>')
 slides.append(slide('delegation', 'Practitioner observations · Codex',
     'A more natural<br><em>delegation workflow.</em>', delegation,
-    'Qualitative reports from Eliza engineers, not a measured benchmark result. The candidate harness assigned scoped tasks; it did not measure autonomous subagent usage or coordination.',
+    'Qualitative Eliza engineering feedback. Autonomous delegation and coordination were not measured in the benchmark.',
     'Eliza practitioner observations · engineering feedback supplied for this evaluation'))
 
 families = plot('api-output',
-    'Vega output relative to Sol: exact reasoning 64.2% fewer; earlier technical API packets 1.3% fewer; public coding subset 1.1% more; staged repository work 40.7% more.')
+    'Astra output relative to Sol: exact reasoning 64.2% fewer; earlier technical API packets 1.3% fewer; public coding subset 1.1% more; staged repository work 40.7% more.')
 families += '<p class="large-note">Same effort within each row: <b>high vs high.</b></p>'
-slides.append(slide('task-fit', 'Direct API · Vega output relative to Sol',
+slides.append(slide('task-fit', 'Direct API · Astra output relative to Sol',
     'Match the model<br><em>to the task.</em>', families,
-    'Matched passing pairs; summed output tokens, including reasoning. These are separate task families, not a pooled effect. Efficiency gains vary by workload; repeats are not new designs.',
+    'Separate task families and matched passing pairs. Output includes reasoning. Gains vary by workload; repeats are not new designs.',
     'Companion evidence package · API claims and candidate ledger'))
 
 method = ('<div class="method-steps"><div><span>01</span><h3>Task</h3><p>Save the prompt.<br>Define acceptance.<br>Record effort and limits.</p></div>'
@@ -85,14 +85,14 @@ method = ('<div class="method-steps"><div><span>01</span><h3>Task</h3><p>Save th
 method += '<a class="artifact-link" href="https://github.com/tejajuttu-eliza/Model-Evaluations/tree/main/astra-sol-field-evaluation/evidence">View evidence on GitHub <span aria-hidden="true">↗</span></a>'
 slides.append(slide('evidence', 'An inspectable evaluation',
     'The evidence should<br><em>travel with the claim.</em>', method,
-    'Small exploratory samples and repeated designs cannot establish a universal ranking. Full outcomes, retries and measurement limits remain in the evidence package. Early-access results are not a GA retest.',
+    'Full outcomes, retries and limits are linked. Small exploratory samples and repeated runs do not establish a universal ranking.',
     'Companion evidence package · methodology, claims, candidates and strata'))
 
-close = ('<p class="closing-lede">The exciting signal: <b>less generated output<br>with passing results</b> in selected<br>reasoning and coding comparisons.</p>'
+close = ('<p class="closing-lede">On selected tasks, Astra used<br><b>fewer output tokens than Sol<br>with the same checks passed.</b></p>'
     '<p class="closing-line">Next: longer workflows and more autonomous execution.<br>What are you seeing in your own builds?</p>')
 slides.append(slide('takeaway', 'What we are excited to explore next',
-    'More room<br>to <em>build.</em>', close,
-    'An early-access field study of Vega-alpha and GPT-5.6 Sol. Evaluate your own acceptance criteria and current deployed versions before generalizing these selected findings.',
+    'A promising upgrade.<br><em>For the right tasks.</em>', close,
+    'Validate the current models on your own tasks and acceptance criteria before generalizing these early-access findings.',
     'Eliza · technical delivery and model evaluation', 'closing'))
 
 frames = []

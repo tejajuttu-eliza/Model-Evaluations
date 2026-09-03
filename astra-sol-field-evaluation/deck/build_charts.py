@@ -60,7 +60,7 @@ def output_comparison(key, name, maximum, ticks, detail, description):
     ax.barh([1, 0], vals, height=.52, color=[INK, ORANGE])
     ax.set_xlim(0, maximum)
     ax.set_ylim(-.7, 1.7)
-    ax.set_yticks([1, 0], ['Sol', 'Vega'])
+    ax.set_yticks([1, 0], ['Sol', 'Astra'])
     ax.tick_params(axis='y', labelsize=19, pad=16)
     ax.set_xticks(ticks, [f'{tick:,}' for tick in ticks])
     ax.tick_params(axis='x', labelsize=12, pad=8)
@@ -74,11 +74,11 @@ def output_comparison(key, name, maximum, ticks, detail, description):
 
 output_comparison('exact', 'exact-output', 35000, [0, 10000, 20000, 30000],
     'High vs high · 3 designs × 2 repeats = 6 pairs · both models 6 / 6 pass',
-    'Exact constraint reasoning output: Sol 30,679, Vega 10,968; 64.2% fewer Vega output tokens including reasoning. Three designs with two repetitions each; six high-effort pairs; both models passed all six.')
+    'Exact constraint reasoning output: Sol 30,679, Astra 10,968; 64.2% fewer Astra output tokens including reasoning. Three designs with two repetitions each; six high-effort pairs; both models passed all six.')
 
 output_comparison('context', 'long-context-output', 8000, [0, 2000, 4000, 6000, 8000],
     'High vs high · 2 designs × 2 context sizes = 4 pairs · both models 4 / 4 pass',
-    'Long-context output: Sol 6,979, Vega 4,957; 29.0% fewer Vega output tokens including reasoning. Two designs at two context sizes; four high-effort pairs; both models passed all four. Input and cached context excluded from this comparison.')
+    'Long-context output: Sol 6,979, Astra 4,957; 29.0% fewer Astra output tokens including reasoning. Two designs at two context sizes; four high-effort pairs; both models passed all four. Input and cached context excluded from this comparison.')
 
 # Codex families use the same token scale and remain separate from API tasks.
 fig = plt.figure(figsize=(11.64, 2.75), dpi=100)
@@ -91,7 +91,7 @@ for i, (key, title) in enumerate([('codex_coding', 'Coding'), ('codex_reasoning'
     ax.barh([1, 0], vals, height=.5, color=[INK, ORANGE])
     ax.set_xlim(0, 2500)
     ax.set_ylim(-.7, 1.7)
-    ax.set_yticks([1, 0], ['Sol', 'Vega'])
+    ax.set_yticks([1, 0], ['Sol', 'Astra'])
     ax.tick_params(axis='y', labelsize=15, pad=12)
     ax.set_xticks([0, 1000, 2000], ['0', '1,000', '2,000'])
     ax.tick_params(axis='x', labelsize=11)
@@ -103,7 +103,7 @@ for i, (key, title) in enumerate([('codex_coding', 'Coding'), ('codex_reasoning'
              weight=600, color=ORANGE, ha='right', va='top')
     fig.text(left, .035, '3 high-effort pairs · both models 3 / 3 pass', fontsize=13, va='bottom')
 finish(fig, 'codex-output',
-    'Codex output tokens including reasoning. Coding: Sol 1,674, Vega 1,403. Reasoning: Sol 2,185, Vega 1,622. Three high-effort pairs in each family; both models passed all three. Unequal runtime context; not an API-versus-Codex causal comparison.')
+    'Codex output tokens including reasoning. Coding: Sol 1,674, Astra 1,403. Reasoning: Sol 2,185, Astra 1,622. Three high-effort pairs in each family; both models passed all three. Unequal runtime context; not an API-versus-Codex causal comparison.')
 
 # Preserve the mixed picture across API families; zero is the explicit reference.
 fig = plt.figure(figsize=(11.64, 2.75), dpi=100)
@@ -126,10 +126,10 @@ for i, (key, label, detail) in enumerate(spec):
     fig.text(.005, fy + .027, label, fontsize=16.6, weight=600, va='center')
     fig.text(.005, fy - .046, detail, fontsize=12.2, color='#666666', va='center')
     fig.text(.992, fy, f'{change:+.1f}%', fontsize=25, weight=600, ha='right', va='center')
-fig.text(.43, .97, 'Fewer Vega tokens', fontsize=12.8, va='top')
-fig.text(.86, .97, 'More Vega tokens', fontsize=12.8, va='top', ha='right')
+fig.text(.43, .97, 'Fewer Astra tokens', fontsize=12.8, va='top')
+fig.text(.86, .97, 'More Astra tokens', fontsize=12.8, va='top', ha='right')
 finish(fig, 'api-output',
-    'Vega output relative to Sol at high effort. Exact reasoning -64.2%; earlier technical API -1.3%; public coding +1.1%; staged repositories +40.7%. Separate task families; output includes reasoning.')
+    'Astra output relative to Sol at high effort. Exact reasoning -64.2%; earlier technical API -1.3%; public coding +1.1%; staged repositories +40.7%. Separate task families; output includes reasoning.')
 
 (OUT / 'manifest.json').write_text(json.dumps({
     'tool':'Matplotlib', 'version':matplotlib.__version__,

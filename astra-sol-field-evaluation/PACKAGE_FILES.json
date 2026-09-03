@@ -55,63 +55,63 @@
     },
     {
       "path": "deck/astra-sol-field-evaluation.pdf",
-      "sha256": "4c435db1e52bb7508bff803bb6b85ccd12736c5cb14f51226e8b500b36198dfe",
-      "bytes": 563230
+      "sha256": "7c21a5502f293c2f4d744cb8c7cf089e1d18d788b33406491074ec65231b435d",
+      "bytes": 561762
     },
     {
       "path": "deck/build_charts.py",
-      "sha256": "a5ecb29267a9905a9169b82a28b63906c1c2ca0ce52e82318b6f38c6981e4eb9",
-      "bytes": 6992
+      "sha256": "3f2bc6ab954ec55711633e79e6be98e69a2f691b0b24c49f8d02cd149c7542ca",
+      "bytes": 7003
     },
     {
       "path": "deck/build_deck.py",
-      "sha256": "a1d367373c2ce5b8d67162a9e499c701f36265d0acf0dc6015bff6c67fb9b60d",
-      "bytes": 9328
+      "sha256": "dd3f51a4b6dc166ce37426e8d6ce32a71e5610589f4363cd9d85f6b46a90a95a",
+      "bytes": 8830
     },
     {
       "path": "deck/charts/api-output.png",
-      "sha256": "24b017ffaf20b0f1e0c51175d4a0ecd22725ec0a8770c57d8d7ffb0ae48432f9",
-      "bytes": 74042
+      "sha256": "17b249992d451daa3ffb466837c9c31ea2586986065a616ffaffc3eeeecbae09",
+      "bytes": 73752
     },
     {
       "path": "deck/charts/api-output.svg",
-      "sha256": "de43da893a7211d673a8027aed50f1852be661fd8bf12fd4340aa7864f72b54c",
-      "bytes": 56226
+      "sha256": "2a65880e94926a2041cc8cbc9af57cf2f12dfa89091c6d4446511fa5c4f90bff",
+      "bytes": 56437
     },
     {
       "path": "deck/charts/codex-output.png",
-      "sha256": "441958c0ee6f397d4c45c243eb4aeb25519c8ad4d9d0b9b068f1c69b21625b28",
-      "bytes": 42213
+      "sha256": "c2d2cb8d07764765f291573c29203e09a2b2001d71666fc05c01ed3e5b49bbdf",
+      "bytes": 41948
     },
     {
       "path": "deck/charts/codex-output.svg",
-      "sha256": "13c6b5c28a722029db282172232ae4d126404443bfe79f20b4175bf18be8127f",
-      "bytes": 47357
+      "sha256": "7b6d56b26737a9f980f6ea2f5890fb02ae5ab48f2daed7d8e1d12b8378820638",
+      "bytes": 47557
     },
     {
       "path": "deck/charts/exact-output.png",
-      "sha256": "2a984bcdfa806eb169fddaadf92a0e2690f0c3ef8962514b8f8d259918c283b2",
-      "bytes": 42177
+      "sha256": "139bdf4ae3c8a42b818e82719dfa8415a098f73a39d63e5d92c9ae4e61748227",
+      "bytes": 41836
     },
     {
       "path": "deck/charts/exact-output.svg",
-      "sha256": "9847ced687b81ee76e9078762b1ca2868624f78674de0d2042c360b2d8edf2b6",
-      "bytes": 36984
+      "sha256": "2ac55f7d62debdd1acf882aa0f2df17592dd4456c31719d847cbd34e05956860",
+      "bytes": 37115
     },
     {
       "path": "deck/charts/long-context-output.png",
-      "sha256": "1aeb6aadfec08f7e2d7110cbaabdbfbcddda7c780761efc9dc46fc2d89145df6",
-      "bytes": 41445
+      "sha256": "264d8f3b2d482ec3a0ba864b7569a290d1cf8019d41c0080dc14a1132062c224",
+      "bytes": 41037
     },
     {
       "path": "deck/charts/long-context-output.svg",
-      "sha256": "f1e8991d428593d0589c1048118004ba7d50c787519cd78a100f28acfeb2f0e0",
-      "bytes": 37008
+      "sha256": "0f4722a72bbf413268065d16ee4ed966451bc7aa223ee770195d6f40ed10b5e5",
+      "bytes": 37139
     },
     {
       "path": "deck/charts/manifest.json",
-      "sha256": "47a307bf8d20344cfe4c62bd25b472f9bb9f1b48e43e23369973fd33f85718de",
-      "bytes": 1663
+      "sha256": "68730bbd6bfe2f9165176f10c343d167b9511cfd09d8f7484353263fb78ffdeb",
+      "bytes": 1670
     },
     {
       "path": "deck/deck-data.json",
@@ -130,13 +130,13 @@
     },
     {
       "path": "deck/index.html",
-      "sha256": "94aa9d1271d32665d5c3f64b81161b953b29215fed93a65a1c37b84c36881647",
-      "bytes": 10634
+      "sha256": "ab2609d28d7f7efaa07b9b4a650ec93eaf5176037ca0676893b0cb897fe60d46",
+      "bytes": 10157
     },
     {
       "path": "deck/slides.json",
-      "sha256": "19143445d2a0767c52ccb71345138a31e4b36a585632c26574ac01062c9d6055",
-      "bytes": 3635
+      "sha256": "4f37945fff87f2949795167132cbc9a594f0ca0282cefa7c3e753f026cea8262",
+      "bytes": 3170
     },
     {
       "path": "evidence/AMENDMENTS.md",
