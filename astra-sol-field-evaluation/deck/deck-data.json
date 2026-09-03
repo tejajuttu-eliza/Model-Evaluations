@@ -9,16 +9,15 @@
   "launch_checkpoint_retested": false,
   "groups": {
     "api": {
-      "pairs": 15,
-      "designs": 15,
-      "selection": "matched passing pairs",
+      "pairs": 14,
+      "designs": 14,
+      "selection": "matched passing pairs; public technical selection",
       "pair_ids": [
         "C1-high-r1",
         "C2-high-r1",
         "C3-high-r1",
         "D1-high-r1",
         "D2-high-r1",
-        "F1-high-r1",
         "HE000-high-r1",
         "HE012-high-r1",
         "HE026-high-r1",
@@ -30,18 +29,18 @@
         "R3-high-r1"
       ],
       "sol": {
-        "input_tokens": 15616,
-        "output_tokens": 6851,
-        "reasoning_tokens": 4047,
-        "reference_cost_usd": 0.210986,
-        "median_elapsed_seconds": 4.060634459005087
+        "input_tokens": 15279,
+        "output_tokens": 6654,
+        "reasoning_tokens": 3967,
+        "reference_cost_usd": 0.205698,
+        "median_elapsed_seconds": 4.077144875001977
       },
       "vega": {
-        "input_tokens": 15616,
-        "output_tokens": 6966,
-        "reasoning_tokens": 4146,
-        "reference_cost_usd": 0.213286,
-        "median_elapsed_seconds": 8.514856750000035
+        "input_tokens": 15279,
+        "output_tokens": 6565,
+        "reasoning_tokens": 3872,
+        "reference_cost_usd": 0.20391800000000002,
+        "median_elapsed_seconds": 7.927762999497645
       }
     },
     "public": {
@@ -170,14 +169,18 @@
         "output_tokens": 6979,
         "reasoning_tokens": 3324,
         "reference_cost_usd": 3.4820262,
-        "median_elapsed_seconds": 24.365576541997143
+        "median_elapsed_seconds": 24.365576541997143,
+        "reference_output_cost_usd": 0.13958,
+        "reference_input_cost_usd": 3.3424462
       },
       "vega": {
         "input_tokens": 1718123,
         "output_tokens": 4957,
         "reasoning_tokens": 1150,
         "reference_cost_usd": 3.4318223999999997,
-        "median_elapsed_seconds": 30.940816188005556
+        "median_elapsed_seconds": 30.940816188005556,
+        "reference_output_cost_usd": 0.09914,
+        "reference_input_cost_usd": 3.3326823999999995
       }
     },
     "codex_coding": {
@@ -204,29 +207,88 @@
         "median_elapsed_seconds": 13.619
       }
     },
-    "codex_fde": {
+    "codex_reasoning": {
       "pairs": 3,
       "designs": 3,
-      "selection": "all assigned pairs",
+      "selection": "all assigned pairs; all both pass",
       "pair_ids": [
-        "F1-high-r1",
-        "F2-high-r1",
-        "F3-high-r1"
+        "R1-high-r1",
+        "R2-high-r1",
+        "R3-high-r1"
       ],
       "sol": {
-        "input_tokens": 222679,
-        "output_tokens": 2422,
-        "reasoning_tokens": 1125,
-        "reference_cost_usd": 0.1691592,
-        "median_elapsed_seconds": 22.064
+        "input_tokens": 222281,
+        "output_tokens": 2185,
+        "reasoning_tokens": 1416,
+        "reference_cost_usd": 0.16282719999999998,
+        "median_elapsed_seconds": 13.212
       },
       "vega": {
-        "input_tokens": 195157,
-        "output_tokens": 3009,
-        "reasoning_tokens": 1235,
-        "reference_cost_usd": 0.297441,
-        "median_elapsed_seconds": 30.336
+        "input_tokens": 194754,
+        "output_tokens": 1622,
+        "reasoning_tokens": 844,
+        "reference_cost_usd": 0.1200766,
+        "median_elapsed_seconds": 12.795
       }
     }
+  },
+  "cost_chart_method": "Provider-reference input component is total reference cost minus output tokens at $20 per million; input includes ordinary and cache traffic at the recorded shared rate scenario.",
+  "history_note": "The illustrated public scope excludes48historicalFDE-labeled candidates. The complete412-candidate ledger is preserved separately; this deck covers364candidates.",
+  "quality": {
+    "sol": {
+      "assigned": 100,
+      "passed": 100
+    },
+    "vega": {
+      "assigned": 100,
+      "passed": 98
+    }
+  },
+  "public_scope": {
+    "source_file": "../evidence/data/presentation-scope.json",
+    "source_sha256": "1058a41d38bc652024b41e368c210ea0bf2b8afdc55240726fc863eeea6ef876",
+    "totals": {
+      "input_tokens": 17448967,
+      "output_tokens": 970125,
+      "total_tokens": 18419092,
+      "reasoning_tokens": 532841,
+      "nonreasoning_tokens": 437284,
+      "cache_read_tokens": 13375899,
+      "cache_write_tokens": 3899585,
+      "calls": 1167,
+      "ordinary_input_tokens": 173483,
+      "candidates": 364,
+      "pairs": 182
+    },
+    "by_surface": {
+      "Codex": {
+        "input_tokens": 2919737,
+        "output_tokens": 25474,
+        "total_tokens": 2945211,
+        "reasoning_tokens": 10507,
+        "nonreasoning_tokens": 14967,
+        "cache_read_tokens": 2844954,
+        "cache_write_tokens": 12416,
+        "calls": 84,
+        "ordinary_input_tokens": 62367,
+        "candidates": 42,
+        "pairs": 21
+      },
+      "Responses API": {
+        "input_tokens": 14529230,
+        "output_tokens": 944651,
+        "total_tokens": 15473881,
+        "reasoning_tokens": 522334,
+        "nonreasoning_tokens": 422317,
+        "cache_read_tokens": 10530945,
+        "cache_write_tokens": 3887169,
+        "calls": 1083,
+        "ordinary_input_tokens": 111116,
+        "candidates": 322,
+        "pairs": 161
+      }
+    },
+    "token_definition": "Recorded input plus output, including cached and repeated context; not generated tokens alone, unique corpus size, internal compute, or actual billed expenditure.",
+    "classification": "Exclude rows whose existing lane label is exactly fde or synthetic-FDE. This is a taxonomy filter, not a retrospective semantic relabeling of tasks."
   }
 }

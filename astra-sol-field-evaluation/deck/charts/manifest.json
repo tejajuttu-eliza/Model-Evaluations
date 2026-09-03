@@ -1,0 +1,32 @@
+{
+  "tool": "Matplotlib",
+  "version": "3.11.1",
+  "deck_data_sha256": "d5745e8b400a1ba4e45ad9640f1b6e4b4cc079116b15098cf94cbb7e4970aef2",
+  "charts": [
+    {
+      "name": "api-output",
+      "description": "Vega output relative to Sol at high effort. Exact reasoning minus64.2%; earlier technical API minus1.3%; public coding plus1.1%; staged repositories plus40.7%. Separate task families; output includes reasoning.",
+      "svg_sha256": "cd42e4cf374b847b2c57c7a21d1d618870c0a58ad6694e96cd59fbff71158444"
+    },
+    {
+      "name": "codex-output",
+      "description": "Codex output tokens including reasoning. Coding: Sol1674,Vega1403. Reasoning: Sol2185,Vega1622. Each3high-effort pairs,both3/3pass. Unequal runtime context; not an API-versus-Codex causal comparison.",
+      "svg_sha256": "170f7eb1cab861b8962c11b001904d570c494918cd758e6d1a82fcb94a70c514"
+    },
+    {
+      "name": "quality-outcomes",
+      "description": "Expanded API campaign: Sol100of100passed; Vega98of100passed with2response-cap failures. Each of200tiles represents one assigned attempt across22selected designs; not independent designs.",
+      "svg_sha256": "8d48c1d9cf4c4c4a18d3628c3a5ae2abca9012c3295e6d9fcef963bc23de8222"
+    },
+    {
+      "name": "recent-index",
+      "description": "Recent response-budget follow-up,2pairs. Output sum Sol22529,Vega21603:4.1%lessVega. Median elapsed Sol155.5715s,Vega214.5022s:37.9%longerVega. Separate axes normalized to Sol100.",
+      "svg_sha256": "1e9c03cf3ef4518811da007f53e82c0d8a2a775a4fc318566f6708fca508f7bb"
+    },
+    {
+      "name": "context-cost",
+      "description": "Reference provider cost across4high-effort long-context workflow pairs. Sol input/cache3.3424462,output.13958,total3.4820262USD. Vega input/cache3.3326824,output.09914,total3.4318224USD. Shared Sol-rate scenario; not actual Vega billing.",
+      "svg_sha256": "88597fa2e6a2ba7cd8da4a67b840bcfc561ea07ec5d2af23b295ddc17d974cae"
+    }
+  ]
+}

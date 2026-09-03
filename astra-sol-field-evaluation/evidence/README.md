@@ -4,6 +4,14 @@ Measurements from early-access **Vega-alpha versus GPT-5.6 Sol**, shared in the 
 
 The useful finding is narrower than “the new model is cheaper”: output-token savings depend on the task, effort, execution environment, and success boundary. Some controlled reasoning tasks used much less output. Some coding tasks used more. Provider-reported output includes reasoning tokens; it is not the length of the final answer.
 
+## Current presentation scope: 18.4 million recorded tokens
+
+The public presentation excludes the existing `fde` and `synthetic-FDE` task lanes. Its **364 candidates / 182 pairs** comprise **322 API candidates and 42 Codex candidates**, totaling **18,419,092 recorded tokens**: 17,448,967 input plus 970,125 output. Input includes 13,375,899 cache-read and 3,899,585 cache-write tokens. These are provider/session accounting units across repeated requests, not 18.4 million newly generated tokens, unique words, or an actual dollar spend.
+
+The exact classifier, included/excluded record keys, surface/model breakdowns, and filtered chart calculations are in [presentation-scope.json](data/presentation-scope.json). The **full historical 412-candidate ledger remains unchanged** for transparency. This narrower presentation omits 48 FDE-labeled candidates totaling 2,705,207 tokens; it does not relabel the historical tasks.
+
+One chart changes with that scope: the original 15-pair objective API subset included FDE case F1. Excluding it leaves 14 pairs, both 14/14 passing, with **1.3% fewer Vega output tokens**—near parity. Its historical 15-pair result of 1.7% more remains in [claims.json](data/claims.json). The exact-reasoning, staged-coding, public-code, expanded success-rate, cap-follow-up, and long-context chart subsets contain no excluded lane rows.
+
 ## Start with these results
 
 All percentages below use `1 − sum(Vega output) / sum(Sol output)`. A negative reduction means Vega used more. The API and Codex rows are separate experiments.
@@ -12,14 +20,14 @@ All percentages below use `1 − sum(Vega output) / sum(Sol output)`. A negative
 |---|---:|---:|---:|---|
 | API: exact constraint reasoning, high effort | 3 / 6 | 30,679 | 10,968 | 64.2% less; both passed all 6 |
 | API: staged repository coding, high effort, clean | 3 / 3 | 34,579 | 48,660 | 40.7% more; both passed all 3 |
-| API: initial objective tasks, high effort, first attempt | 15 / 15 | 6,851 | 6,966 | 1.7% more; both passed all 15 |
+| API: initial objective tasks excluding FDE, high effort, first attempt | 14 / 14 | 6,654 | 6,565 | 1.3% less; both passed all 14 |
 | API: adapted public coding subset, high effort | 16 / 16 | 5,656 | 5,717 | 1.1% more; both passed after the documented grader correction |
 | Codex: coding, high effort, first attempt | 3 / 3 | 1,674 | 1,403 | 16.2% less; both passed all 3; unequal runtime context |
 | Codex: reasoning, high effort, first attempt | 3 / 3 | 2,185 | 1,622 | 25.8% less; both passed all 3; unequal runtime context |
 
-The full [claim calculations](data/claims.json), [paired table](data/pairs.csv), and [68-stratum table](data/strata.csv) include counterexamples, unresolved grades, repetitions, and conditional versus all-assigned metrics. Do not pool all workloads into one model ranking. Six repeated observations of three designs are not six independent unseen designs.
+The [current presentation calculations](data/presentation-scope.json), full historical [claim calculations](data/claims.json), [paired table](data/pairs.csv), and [68-stratum table](data/strata.csv) include counterexamples, unresolved grades, repetitions, and conditional versus all-assigned metrics. Do not pool all workloads into one model ranking. Six repeated observations of three designs are not six independent unseen designs.
 
-## What is in the study
+## Full historical study inventory
 
 | Cohort | Surface | Candidate attempts |
 |---|---|---:|
@@ -34,11 +42,11 @@ The full [claim calculations](data/claims.json), [paired table](data/pairs.csv),
 
 Four fixed-output streaming probes are supplementary and appear only in [stream-probes.json](data/stream-probes.json). They are not four additional task-success trials. Three original invalidated/interrupted attempts appear separately in [infrastructure-attempts.json](data/infrastructure-attempts.json). Their known usage is included in the corresponding retry-inclusive fields; missing usage remains unknown. Judge calls, coordinator work, and human-review time are outside this candidate inventory.
 
-The initial API packet comparisons supplied equal task prompts directly. The historical Codex assignments included different inherited/runtime context: first-high coding inputs totaled 222,134 Sol versus 194,634 Vega tokens. These results cannot identify whether API or Codex itself changes relative model performance. The API repository runs used a custom tool harness; they are not native Codex sessions.
+The initial API packet comparisons supplied equal task prompts directly. The historical Codex assignments included different inherited/runtime context: first-high coding inputs totaled 222,134 Sol versus 194,634 Vega tokens. These results cannot identify whether API or Codex itself changes relative model performance. The API repository runs used a custom tool harness; they are not native Codex sessions. Autonomous subagent delegation was not measured: the 80 historical Codex candidates were fixed one-read packets, and the API harness did not expose agent spawning. The evaluator's parallel workers are not evidence that one candidate model chooses to delegate more.
 
 ## Reproduce the calculations locally
 
-Python 3.10+ and its standard library suffice for arithmetic and exact-answer validation. No API key, provider account, network request, or new model call is needed.
+Python 3.10+ and its standard library suffice for arithmetic and exact-answer validation. No API key, provider account, network request, or new model call is needed. Run the commands below from this `evidence/` directory. The repository-root README provides commands with the full relative paths.
 
 ```sh
 python3 -B recompute.py --check
@@ -50,7 +58,7 @@ python3 -B verify_package.py
 
 `verify_examples.py` independently enumerates the three exact constraint instances, regrades all 12 high-effort answers behind the 64.2% result, rejects 36 deliberately invalid answer controls, and reconciles the 12 short API answer records with the normalized usage ledger. It executes no model-generated code. The grader verifies numerical feasibility/optimality and certificates; it does not verify the semantics of each free-text explanation.
 
-An optional final-code replay uses the original macOS sandbox wrapper. It requires macOS `sandbox-exec` and the tested Homebrew Python runtime. It denies network access and private-file reads outside the supplied inputs, and confines writes to a temporary workspace. It stops if the sandbox is unavailable; there is no unsandboxed fallback.
+An optional final-code replay uses the original macOS sandbox wrapper. It requires `/usr/bin/sandbox-exec` and Python at `/opt/homebrew/bin/python3` (the Apple Silicon Homebrew layout); the wrapper selects that exact interpreter. It is not portable to Intel or nonstandard Python installations without adapting and revalidating the isolation. It denies network access and private-file reads outside the supplied inputs, and confines writes to a temporary workspace. It stops if the sandbox is unavailable; there is no unsandboxed fallback.
 
 ```sh
 python3 -B verify_staged.py

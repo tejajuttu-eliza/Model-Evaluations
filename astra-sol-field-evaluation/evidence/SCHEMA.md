@@ -54,6 +54,12 @@ Three scopes are calculated:
 
 `data/claims.json` names 12 selected views and lists the exact `(cohort,pair_id)` keys used by each. Its campaign-wide view supplies success counts and an inventory; its heterogeneous resource aggregate should not be presented as a model ranking.
 
+## Current public presentation selection
+
+`data/presentation-scope.json` is an additional view over the unchanged full ledger. Its explicit classifier excludes the existing lane labels `fde` and `synthetic-FDE`, yielding 364 candidates and 182 pairs. It includes all selected and excluded candidate keys, input/output/cache totals, model and API/Codex breakdowns, and seven filtered chart views. Within a one-model breakdown, `pairs` means distinct contributing pair identifiers, not independently complete pairs.
+
+The initial objective API chart is the only one of these seven views changed by the exclusion: 15 historical pairs become 14 after removing F1. `chart_claims` uses the same all-assigned/matched-pass/retry-inclusive schema as the historical claims, with the filtered pair identifiers. The source candidate-file hash ties the selection to the preserved ledger. `verify_package.py` recalculates the selection and filtered charts.
+
 ## Examples
 
 Exact-reasoning `cases.json` supplies the full task prompt. `oracles.json` supplies the instance and exhaustively checked optimum. `answers.json` joins to candidates by run ID and includes only visible answers plus selected usage and text-stream telemetry, with all provider identifiers removed. The token-rate proxy is not the provider's internal decoding speed.

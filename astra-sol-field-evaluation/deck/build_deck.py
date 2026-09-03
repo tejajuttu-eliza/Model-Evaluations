@@ -3,9 +3,12 @@
 from pathlib import Path
 import json
 import html
+import hashlib
 
 HERE = Path(__file__).resolve().parent
 data = json.loads((HERE / 'deck-data.json').read_text())
+chart_manifest = json.loads((HERE / 'charts/manifest.json').read_text())
+assert chart_manifest['deck_data_sha256'] == hashlib.sha256((HERE / 'deck-data.json').read_bytes()).hexdigest(), 'Rebuild the charts after changing the evidence snapshot.'
 esc = lambda s: html.escape(str(s))
 pct = lambda f: f'{100 * f:.1f}%'
 
@@ -20,47 +23,35 @@ def slide(key, eyebrow, title, body, note, sources, cls=''):
 def stat(value, label, detail='', cls=''):
     return f'<div class="stat {cls}"><strong>{value}</strong><h3>{label}</h3><p>{detail}</p></div>'
 
+def plot(name, alt, css=''):
+    return f'<figure class="plot {css}"><img src="charts/{name}.svg" alt="{esc(alt)}"></figure>'
+
 slides = []
 slides.append(slide('cover', 'GPT-6 Astra vs GPT-5.6 Sol',
     'The task decides<br>the <em>upgrade.</em>',
     '<p class="cover-lede">Where the early-access model saved tokens.<br>Where the advantage disappeared.</p>'
+    '<p class="cover-scope"><b>364 candidate attempts</b> · <b>18.4M recorded tokens</b></p>'
     '<p class="cover-author">An Eliza field evaluation · Teja</p>',
-    'Findings from early-access Vega-alpha testing against GPT-5.6 Sol. The launch version has not been retested.',
+    'Input + output, including cached context, across both models. Early-access Vega-alpha vs GPT-5.6 Sol; not a launch-version retest. Attempts are not independent designs.',
     'Companion evidence package · scope and model provenance', 'cover'))
 
-rows = [
-    ('exact', 'Exact constraint reasoning', '3 designs · 6 passing pairs'),
-    ('api', 'Earlier API task packets', '15 designs · 15 passing pairs'),
-    ('public', 'Public coding subset', '16 designs · 16 passing pairs'),
-    ('staged', 'Staged repository work', '3 clean workflows · 3 passing pairs'),
-]
-chart = '<div class="chart" role="img" aria-label="Vega output change relative to Sol. The direction changes across the four task families."><div class="chart-axis"><span>Fewer tokens</span><b>Same</b><span>More tokens</span></div>'
-for key, label, detail in rows:
-    v = metric(key)
-    w = abs(v) / .7 * 50
-    left = 50-w if v > 0 else 50
-    signed = f'{-100*v:+.1f}%'.replace('-', '−')
-    chart += f'<div class="chart-row"><div class="chart-label"><b>{label}</b><span>{detail}</span></div><div class="track"><div class="zero"></div><div class="bar" style="left:{left:.3f}%;width:{w:.3f}%"></div></div><strong>{signed}</strong></div>'
-chart += '</div><p class="large-note">Same effort within each row: <b>high vs high.</b></p>'
+chart = plot('api-output','Vega output relative to Sol: exact reasoning 64.2% fewer; earlier technical API packets 1.3% fewer; public coding subset 1.1% more; staged repository work 40.7% more.')
+chart += '<p class="large-note">Same effort within each row: <b>high vs high.</b></p>'
 slides.append(slide('api-results', 'Direct API · Vega output relative to Sol',
     'One model.<br><em>Opposite</em> token results.', chart,
     'Matched passing pairs; change in summed output tokens, including reasoning. Separate task families, not a pooled model effect. Repeats are not new designs.',
     'Companion evidence package · API claims and candidate ledger'))
 
-codex = (f'<div class="surface-grid"><div><h3>Direct API</h3><div class="surface-count">332 <span>candidate workflows</span></div>'
-    '<p>Explicit prompts and settings.<br>Provider usage and task-specific checks.</p></div>'
-    '<div><h3>Codex</h3><div class="surface-count">80 <span>candidate assignments</span></div>'
-    '<p>Model + app context + tools + cache.<br>Captured inputs differed by model.</p></div></div>'
-    '<div class="codex-readout"><div class="readout-label">Vega vs Sol in Codex<br><span>Selected high-effort subsets</span></div>' +
-    stat(pct(metric('codex_coding'))+' less', 'coding output', '3 designs / pairs · both 3 / 3 pass') +
-    stat(pct(-metric('codex_fde'))+' more', 'FDE task output', '3 designs / pairs · recorded passes 2 / 3 each') + '</div>')
+codex = ('<p class="scope-line">Public comparison scope: <b>322 API workflows</b> · <b>42 Codex assignments</b></p>'
+    '<p class="plot-kicker">Within Codex · output tokens including reasoning · Vega vs Sol</p>' +
+    plot('codex-output','Codex coding: Sol 1674 output tokens, Vega 1403, 16.2% less. Codex reasoning: Sol 2185, Vega 1622, 25.8% less. Three high-effort pairs per family; both models pass all three.', 'codex-plot'))
 slides.append(slide('surfaces', 'Separate evidence surfaces',
-    'API and Codex answer<br><em>different questions.</em>', codex,
-    'Codex examples are synthetic packet tasks, not long repository work. FDE grading included model rubrics. Different tasks and runtime context prevent an API-versus-Codex causal comparison.',
+    'API and Codex need<br><em>separate readouts.</em>', codex,
+    'FDE-specific lanes excluded; full historical ledger preserved. Codex used synthetic packet tasks with unequal runtime inputs. Different tasks and runtime context prevent an API-versus-Codex causal comparison.',
     'Companion evidence package · surface inventory and Codex strata'))
 
-quality = '<div class="quality-grid">' + stat('100 / 100', 'Sol objective passes', 'Expanded API campaign · assigned tasks') + stat('98 / 100', 'Vega objective passes', 'Expanded API campaign · assigned tasks') + '</div>'
-quality += '<div class="statement"><b>Two Vega attempts hit the response cap.</b><span>Those failures stay in the result.</span></div>'
+quality = plot('quality-outcomes','One square per assigned attempt. Sol passed 100 of 100. Vega passed 98 of 100, with two response-cap failures.','quality-plot')
+quality += '<p class="large-note"><b>Those two failures stay in the result.</b></p>'
 slides.append(slide('quality', 'Quality before efficiency',
     'Token efficiency matters<br><em>after it works.</em>', quality,
     '200 assigned attempts across 22 selected designs and multiple effort settings. Both failures were one repository design at high / xhigh. This is not established production-quality equivalence.',
@@ -68,22 +59,23 @@ slides.append(slide('quality', 'Quality before efficiency',
 
 cap = data['groups']['cap']
 slower = cap['vega']['median_elapsed_seconds'] / cap['sol']['median_elapsed_seconds'] - 1
-latest = '<div class="two-stats">'+ stat(pct(metric('cap')), 'fewer Vega output tokens', 'One repository design · 2 pairs · high') + stat(pct(slower), 'longer completion time', 'Both models passed 2 / 2') + '</div>'
-latest += '<p class="large-note">The latest follow-up showed <b>a small token difference.</b></p>'
+latest = plot('recent-index','Two measures indexed separately to Sol 100. Vega generated output index 95.9 and completion time index 137.9. Output sums 22529 versus 21603; median elapsed times 155.6 versus 214.5 seconds.','recent-plot')
+latest += '<p class="large-note">A small token difference. <b>A longer wait.</b></p>'
 slides.append(slide('recent', 'Recent completed follow-up',
     'The advantage can<br><em>get small.</em>', latest,
     'Fresh attempts used a larger budget, longer timeout and serial execution. Recovery does not prove the old cap caused the failures. Time is median end-to-end elapsed time, not decoding speed.',
     'Companion evidence package · response-budget follow-up'))
 
-cost = '<div class="cost-flow">' + stat(f'{metric("context")*100:.0f}%', 'fewer Vega output tokens', 'Versus Sol · long-context workflows') + '<span class="arrow" aria-hidden="true">→</span>' + stat(f'~{metric("context", "reference_cost_usd")*100:.1f}%', 'lower reference cost', 'Same price assumptions for both') + '</div>'
-cost += '<p class="large-note">Here, input dominated<br>the <b>provider cost estimate.</b></p>'
+cost = '<div class="cost-metrics">' + stat(f'{metric("context")*100:.0f}%', 'fewer Vega output tokens') + stat(f'~{metric("context", "reference_cost_usd")*100:.1f}%', 'lower reference cost') + '</div>'
+cost += plot('context-cost','Provider-reference cost across four long-context pairs: Sol input and cache $3.342, output $0.140; Vega input and cache $3.333, output $0.099. Input dominates.','cost-plot')
+cost += '<p class="cost-conclusion">Input dominated the provider cost estimate.</p>'
 slides.append(slide('economics', 'Task economics',
     'Measure the full<br><em>cost of the task.</em>', cost,
     'High · 2 designs · 4 passing pairs. Shared Sol-rate scenario; Vega pricing was unverified. Provider calls only: review, tool hosting and orchestration costs are excluded.',
     'Companion evidence package · cost formula, input/cache/output accounting'))
 
 method = '<div class="method-steps"><div><span>01</span><h3>Task</h3><p>Save the prompt.<br>Define acceptance.<br>Record effort and limits.</p></div><div><span>02</span><h3>Run</h3><p>Keep provider usage.<br>Separate API and Codex.<br>Count failures and retries.</p></div><div><span>03</span><h3>Review</h3><p>Inspect by task family.<br>Check human acceptance.<br>Publish the limitations.</p></div></div>'
-method += '<a class="artifact-link" href="../evidence/README.md">Companion evidence package <span aria-hidden="true">↗</span></a>'
+method += '<a class="artifact-link" href="https://github.com/tejajuttu-eliza/Model-Evaluations/tree/main/astra-sol-field-evaluation/evidence">View evidence on GitHub <span aria-hidden="true">↗</span></a>'
 slides.append(slide('evidence', 'An inspectable evaluation',
     'The evidence should<br><em>travel with the claim.</em>', method,
     'Small exploratory samples and repeated designs cannot establish a universal model ranking. The package separates candidate outcomes, measurement boundaries and public-release limitations.',

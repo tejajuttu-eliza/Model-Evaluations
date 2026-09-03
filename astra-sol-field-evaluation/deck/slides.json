@@ -3,7 +3,7 @@
     "key": "cover",
     "eyebrow": "GPT-6 Astra vs GPT-5.6 Sol",
     "title": "The task decides<br>the <em>upgrade.</em>",
-    "note": "Findings from early-access Vega-alpha testing against GPT-5.6 Sol. The launch version has not been retested.",
+    "note": "Input + output, including cached context, across both models. Early-access Vega-alpha vs GPT-5.6 Sol; not a launch-version retest. Attempts are not independent designs.",
     "sources": "Companion evidence package \u00b7 scope and model provenance",
     "cls": "cover"
   },
@@ -18,8 +18,8 @@
   {
     "key": "surfaces",
     "eyebrow": "Separate evidence surfaces",
-    "title": "API and Codex answer<br><em>different questions.</em>",
-    "note": "Codex examples are synthetic packet tasks, not long repository work. FDE grading included model rubrics. Different tasks and runtime context prevent an API-versus-Codex causal comparison.",
+    "title": "API and Codex need<br><em>separate readouts.</em>",
+    "note": "FDE-specific lanes excluded; full historical ledger preserved. Codex used synthetic packet tasks with unequal runtime inputs. Different tasks and runtime context prevent an API-versus-Codex causal comparison.",
     "sources": "Companion evidence package \u00b7 surface inventory and Codex strata",
     "cls": ""
   },

@@ -32,5 +32,17 @@
     "Exported arithmetic checks do not independently authenticate provider records.",
     "The production GPT-6-Astra checkpoint was not retested.",
     "Archived missing usage remains null."
-  ]
+  ],
+  "presentation_scope": {
+    "candidate_rows": 364,
+    "pairs": 182,
+    "recorded_total_tokens": 18419092,
+    "api_candidates": 322,
+    "codex_candidates": 42,
+    "excluded_lanes": [
+      "fde",
+      "synthetic-FDE"
+    ],
+    "initial_objective_api_pairs_after_exclusion": 14
+  }
 }

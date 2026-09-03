@@ -1,23 +1,23 @@
-GPT-6 Astra vs Sol: 64% fewer output tokens on exact reasoning. 41% more on staged coding.
+We got early access to OpenAI's GPT-6 Astra (codenamed Vega-alpha) at Eliza.
 
-At Eliza, we had early access to the model behind today's Astra launch. I tested that early build against GPT-5.6 Sol on synthetic tasks drawn from the work I do as an FDE: coding, constraint reasoning, source reconciliation and delivery decisions.
+18.4 million tracked tokens across Astra and Sol later, here's what stood out.
 
-Three results from matched high-effort API tests:
+I compared it with GPT-5.6 Sol through both the API and Codex, at matched reasoning effort. The slides focus on coding, constraint reasoning and repository workflows.
 
-• Exact constraint reasoning: 64.2% fewer output tokens. Three designs, each run twice per model; both passed all six.
-• Staged repository changes: 40.7% more output tokens. Three workflows; both passed all three.
-• A broader set of 15 objective API tasks: 1.7% more output tokens.
+Three things I'm taking away:
 
-Across all effort settings in the expanded campaign, Sol passed 100/100 attempts; the early alpha passed 98/100.
+→ The token win is real in some workloads. On three exact constraint-reasoning designs, run twice per model at high effort, the alpha used 64.2% fewer output tokens. Both models passed all six. That's a result I'm excited to test on more unseen problems.
 
-The efficiency gain on exact reasoning is worth paying attention to. So is where it disappears.
+→ Coding needs a wider lens. The savings didn't carry over to staged repository work, where the alpha used more output. Fewer tokens also didn't consistently mean faster completion. I want to measure how much review and repair the finished work needs.
 
-I also tested through Codex and kept those results separate. The surrounding instructions, tools and cache behavior are part of what you're measuring there.
+→ Delegation is the behavior I'm most curious about. In Codex, Astra seems more willing to split scoped work across subagents. Colleagues are noticing this too. The next question is whether it reduces steering and rework on longer jobs; our benchmark didn't score that.
 
-For FDE teams, the useful decision is which model and effort level produce work we can accept—with the least total cost and rework.
+I kept API and Codex results separate, and kept the failures: the expanded campaign finished at 100/100 passes for Sol and 98/100 for the alpha.
 
-That's the standard I want us to keep at Eliza as models improve: test the workflow, preserve the failures, and measure the whole task.
+The PDF has the charts, tradeoffs and test boundaries. These are early-access measurements, not a retest of released Astra. The 18.4M total counts input and output across both models, including cached context. Output includes reasoning.
 
-The attached slides show the gains, reversals and API/Codex split. Output tokens include reasoning; these are early-access Vega-alpha measurements, not a retest of production Astra or a claim about actual dollar savings.
+Thanks to the OpenAI team, Syed A. and Matt Lewis for the early access.
 
-Thanks to the OpenAI team for the early access and opportunity to put it through its paces.
+The evaluation artifacts and methodology are on GitHub. Link in the comments.
+
+Where are you seeing the biggest difference versus Sol—planning, implementation or longer tasks? And is more delegation actually saving you time?

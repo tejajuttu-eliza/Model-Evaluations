@@ -1,5 +1,6 @@
 {
-  "scope": "Local draft of the proposed public repository. Publication pending.",
+  "scope": "Curated public evaluation package. Paths are relative to this package directory; repository-root documentation is outside this manifest.",
+  "repository_url": "https://github.com/tejajuttu-eliza/Model-Evaluations",
   "measurement_dates_utc": [
     "2026-09-02",
     "2026-09-03"
@@ -9,8 +10,8 @@
   "files": [
     {
       "path": "README.md",
-      "sha256": "083228d73eef6932a8bb2c6bd4181ed39330dd4caa663568169418c31815dc33",
-      "bytes": 4010
+      "sha256": "94e7df2e41552163ab0099641ecee0354a9d280624980bd71fde9b3870fc8bc1",
+      "bytes": 5902
     },
     {
       "path": "deck/assets/README.md",
@@ -54,23 +55,83 @@
     },
     {
       "path": "deck/astra-sol-field-evaluation.pdf",
-      "sha256": "90c609fd214c92ac0c6ab738dd2812011b01a8e24d891b4692c4b9195e925138",
-      "bytes": 459849
+      "sha256": "dbb6df0ccbfc65d38a9be3d50fed779c1171df3129a07b6c66a78bd19d957a13",
+      "bytes": 607178
+    },
+    {
+      "path": "deck/build_charts.py",
+      "sha256": "d67f0a92ce7cfcad6c13204a87e920f548d907d74e020ac2857376e42078b819",
+      "bytes": 9122
     },
     {
       "path": "deck/build_deck.py",
-      "sha256": "59c5740ff3c1f73b0af1db2b7c0e4222684b4e83113cb77b494ef1951fad212d",
-      "bytes": 9701
+      "sha256": "83b9464f9fa0f906eb3c113276ef2ccb739caecc5bed3bf6432f80cfe55c6c24",
+      "bytes": 9170
+    },
+    {
+      "path": "deck/charts/api-output.png",
+      "sha256": "6999a567757ca2e1814456e494d184ef0be39da753d361560567e35e261b93e3",
+      "bytes": 74056
+    },
+    {
+      "path": "deck/charts/api-output.svg",
+      "sha256": "cd42e4cf374b847b2c57c7a21d1d618870c0a58ad6694e96cd59fbff71158444",
+      "bytes": 56246
+    },
+    {
+      "path": "deck/charts/codex-output.png",
+      "sha256": "6ffdda362ebe74d2dad898e29c18c8c9d4d65b78b301f6b7506e295161d9e43c",
+      "bytes": 42169
+    },
+    {
+      "path": "deck/charts/codex-output.svg",
+      "sha256": "170f7eb1cab861b8962c11b001904d570c494918cd758e6d1a82fcb94a70c514",
+      "bytes": 47313
+    },
+    {
+      "path": "deck/charts/context-cost.png",
+      "sha256": "76208e4814aa173e7131a73137f661130ee979218b03238e041dd3e5e98a2bed",
+      "bytes": 39134
+    },
+    {
+      "path": "deck/charts/context-cost.svg",
+      "sha256": "88597fa2e6a2ba7cd8da4a67b840bcfc561ea07ec5d2af23b295ddc17d974cae",
+      "bytes": 39769
+    },
+    {
+      "path": "deck/charts/manifest.json",
+      "sha256": "f315f86644d21326aaf94d9bf78dfd971025489308469daf28cee8ac972f2e33",
+      "bytes": 1946
+    },
+    {
+      "path": "deck/charts/quality-outcomes.png",
+      "sha256": "912a2de34ee72732f093a492799db7afcc56f0d4b054c70c533854608ac0fac1",
+      "bytes": 43731
+    },
+    {
+      "path": "deck/charts/quality-outcomes.svg",
+      "sha256": "8d48c1d9cf4c4c4a18d3628c3a5ae2abca9012c3295e6d9fcef963bc23de8222",
+      "bytes": 74992
+    },
+    {
+      "path": "deck/charts/recent-index.png",
+      "sha256": "1184ef8628a033aa3f0a81330787132e0caf47621a85abf7aa8163d0610e5455",
+      "bytes": 60381
+    },
+    {
+      "path": "deck/charts/recent-index.svg",
+      "sha256": "1e9c03cf3ef4518811da007f53e82c0d8a2a775a4fc318566f6708fca508f7bb",
+      "bytes": 63595
     },
     {
       "path": "deck/deck-data.json",
-      "sha256": "dd57f20b7e63893c7890cea824e1b51330b66e8d3225b3477ee782b0ad5c39ca",
-      "bytes": 6370
+      "sha256": "d5745e8b400a1ba4e45ad9640f1b6e4b4cc079116b15098cf94cbb7e4970aef2",
+      "bytes": 8858
     },
     {
       "path": "deck/deck.css",
-      "sha256": "026fff96649ecbed715056bdfcb12749c64eefb06f49ab141652b063b437c303",
-      "bytes": 10504
+      "sha256": "36761a3edf53fa23fdfde16d40059070561ba759506bcbc14e31d31de7dc469b",
+      "bytes": 12112
     },
     {
       "path": "deck/deck.js",
@@ -79,38 +140,38 @@
     },
     {
       "path": "deck/index.html",
-      "sha256": "b459293ac6d7f0e201a7b6f97ce17f4bd751cd00a3c6d4732d7ef766e42c1722",
-      "bytes": 11509
+      "sha256": "985e5e0aadf7f84a018b4585a5d2f221ad01291db63fc34f079f2a2237d50e6a",
+      "bytes": 10366
     },
     {
       "path": "deck/slides.json",
-      "sha256": "913c9a787f852c872792a4609f76ce93e6f6f54dfa0f96d8baf471efb19646ff",
-      "bytes": 3423
+      "sha256": "80502a5b04e4706808ebcb57837aeadf17117407baed997450dbafcb19755180",
+      "bytes": 3500
     },
     {
       "path": "evidence/AMENDMENTS.md",
-      "sha256": "be68f5ba08adb4727dfada7f703476486838a118db38a8828f500bc360f1b37a",
-      "bytes": 2982
+      "sha256": "77a5c4d7ce2d75e2c7f0de8cbde8c5fea97280fc9211fd1e815d5949d46987aa",
+      "bytes": 3248
     },
     {
       "path": "evidence/PUBLIC_FILES.json",
-      "sha256": "418646915946ea0b842c8dcbd0d5b6274de03515e91b0f0618e0c3ca980c23ae",
-      "bytes": 8830
+      "sha256": "ab1660d7d2167e23f7b1ace13313c56bbbb419d1828253aab83480146020eeaa",
+      "bytes": 9031
     },
     {
       "path": "evidence/README.md",
-      "sha256": "a89a4a589b2ae4e24a7c9c1d407c30b0d1b175e06d1b7df0ef65f1dbbcfe322c",
-      "bytes": 10327
+      "sha256": "1dd3366005a2c1c863279cd6c5f4423050a06aab4ad59a90dccef529c623457e",
+      "bytes": 12390
     },
     {
       "path": "evidence/SCHEMA.md",
-      "sha256": "d4108ce36ba6ca8bcecd587c9d215a1e120aa3bada2a9adf56f8f829d665a0c1",
-      "bytes": 5590
+      "sha256": "f73d2657ddba8778f41d20ce54d2ebeaa4ea5520d1f913634d246b8554ef7750",
+      "bytes": 6533
     },
     {
       "path": "evidence/VERIFICATION.json",
-      "sha256": "804eac6f0c27ac69d8c27cc6f0ebf23b3754444cc26c0d1b1deab4821924ecd1",
-      "bytes": 1035
+      "sha256": "cc6a9dbb6459751048089f3d7478764534cf213281f42e67e477329501c3858e",
+      "bytes": 1325
     },
     {
       "path": "evidence/data/candidates.csv",
@@ -146,6 +207,11 @@
       "path": "evidence/data/pairs.json",
       "sha256": "c9ab76763c883632a8d0989311ec54a7f5661817b9cfdce8aee9aee71d035e55",
       "bytes": 362464
+    },
+    {
+      "path": "evidence/data/presentation-scope.json",
+      "sha256": "1058a41d38bc652024b41e368c210ea0bf2b8afdc55240726fc863eeea6ef876",
+      "bytes": 225956
     },
     {
       "path": "evidence/data/strata.csv",
@@ -289,8 +355,8 @@
     },
     {
       "path": "evidence/verify_package.py",
-      "sha256": "b788a22d779b7691b80febd46dc6079ff81a35799f1e92b811f569b20b75b4a1",
-      "bytes": 2932
+      "sha256": "92cc45b4244bfa40f7a11de27cd95ffee5574c7f7557247f03c1f4b87463f160",
+      "bytes": 4888
     },
     {
       "path": "evidence/verify_staged.py",
@@ -299,8 +365,8 @@
     },
     {
       "path": "linkedin-post.md",
-      "sha256": "df9300b40e009e601870b0bb30ee69149fec26eba50bb805e9f8353fdd609199",
-      "bytes": 1637
+      "sha256": "62872a3db506a2a3cae4e05241172b0e6eda568da57f097707f44d15b780717e",
+      "bytes": 1827
     }
   ]
 }
