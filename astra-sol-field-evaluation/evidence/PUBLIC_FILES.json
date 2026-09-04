@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "scope": "Only these files and this manifest belong in the public evidence package. No enclosing private-review directory.",
+  "manifest_self_hash": "Omitted to avoid a recursive hash.",
+  "files": [
+    {
+      "path": "AMENDMENTS.md",
+      "sha256": "07170ef20ed7a539153726c2f9f7019d76cd45d553d0069be73b935be35bc4a4",
+      "bytes": 3790
+    },
+    {
+      "path": "README.md",
+      "sha256": "ee031d14f6b4496bed02ada83f833e56ab3f96562c70155e0d24225ee62a18de",
+      "bytes": 12565
+    },
+    {
+      "path": "SCHEMA.md",
+      "sha256": "e25af774e8eb0c31878197847354f95fb3b9094d3f90e0ee6d6fd982deeaefa0",
+      "bytes": 7085
+    },
+    {
+      "path": "VERIFICATION.json",
+      "sha256": "cc6a9dbb6459751048089f3d7478764534cf213281f42e67e477329501c3858e",
+      "bytes": 1325
+    },
+    {
+      "path": "data/candidates.csv",
+      "sha256": "e91d9e38460f71828cddc5d345a2a66e225417f754459b0cb7a7250286ae4919",
+      "bytes": 157980
+    },
+    {
+      "path": "data/candidates.json",
+      "sha256": "a27739b2ef8172557aa3ed72e56df73f96fd9afd245aefa039fb18703652e094",
+      "bytes": 688974
+    },
+    {
+      "path": "data/claims.json",
+      "sha256": "59ce33be90b5eca315781196e05503c9f4086896498be0a7c1f18f31509eb31b",
+      "bytes": 271644
+    },
+    {
+      "path": "data/export-context.json",
+      "sha256": "05492b89869c8f878d1fa8626b78a30e1fae5efe25422bd92a65ec35b6fb7549",
+      "bytes": 1779
+    },
+    {
+      "path": "data/infrastructure-attempts.json",
+      "sha256": "3e0d98c5267b054bfb766e03a4fec9466b46655df186561f874c45a68e3651ba",
+      "bytes": 3822
+    },
+    {
+      "path": "data/pairs.csv",
+      "sha256": "35d824b98e26c7e47b1ad206e89f86833c3363761a5ae86db8ca77fdf5ecdee3",
+      "bytes": 99097
+    },
+    {
+      "path": "data/pairs.json",
+      "sha256": "125d846dfecdaadfd722967545d161917dcef72ea168b4d56fb390613d5bef57",
+      "bytes": 365308
+    },
+    {
+      "path": "data/presentation-scope.json",
+      "sha256": "735a1b5a77c397acea3b904b1ffb008b2c110215cd28516c5aadf1195b429b2b",
+      "bytes": 226843
+    },
+    {
+      "path": "data/strata.csv",
+      "sha256": "6914fb25255f3129f91ddc38ca3f18a0d23c117055556d39d7b5471cf5d4e27e",
+      "bytes": 550417
+    },
+    {
+      "path": "data/strata.json",
+      "sha256": "f7cd7946afae0692a72e5354d055cc7bf9f204a10f1d3c944092097f33515115",
+      "bytes": 1180019
+    },
+    {
+      "path": "data/stream-probes.json",
+      "sha256": "6d4526112a3c0e3b0c3d7e21bbd0033552ae5fa60a9b1717b37b3f7b7d0cc6e5",
+      "bytes": 5131
+    },
+    {
+      "path": "examples/exact-reasoning/answers.json",
+      "sha256": "50736a1aa39d104b60e23119b602fbaa690ce247cc9068a0ec3d8746d8dba327",
+      "bytes": 14455
+    },
+    {
+      "path": "examples/exact-reasoning/cases.json",
+      "sha256": "c12ceb004442b6e5b41496da6bf70d7e3ddbe3bcc9011e8f8f0b9873ea7ee9b5",
+      "bytes": 11362
+    },
+    {
+      "path": "examples/exact-reasoning/grader.py",
+      "sha256": "910542a9edc62199edd94e98713d42e31571b92011c53f5e80d2f85364e3da30",
+      "bytes": 10671
+    },
+    {
+      "path": "examples/exact-reasoning/oracles.json",
+      "sha256": "c493ef3a7dab18188fad20a84fc26b965731841b62c19e9c50be28ad6b5c13a0",
+      "bytes": 13306
+    },
+    {
+      "path": "examples/exact-reasoning/verify_oracles.py",
+      "sha256": "c22557ab3b518567b2fae48c39a0f0e4eec513d93ceca8656bf4e94945543dad",
+      "bytes": 5205
+    },
+    {
+      "path": "examples/short-api/records.json",
+      "sha256": "135bfc6b6ecbe7497f5e8dcc957779256cf207e2530103ad568d772a6048da24",
+      "bytes": 29036
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR1/phase0.py",
+      "sha256": "8e8707589608a389ee004b90db9ddeb86bbfaa219c82511280e3765eb196ecfb",
+      "bytes": 7424
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR1/phase1.py",
+      "sha256": "14a4b8c70ea80cbd9b0b74ebf637465c65adf3e7ac53130e0513ac7b8bd6a946",
+      "bytes": 4604
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR1/public.py",
+      "sha256": "0cab7471872ed449bc2d76906c126675eeacfc1c41ff4436cb60ae6c595571f7",
+      "bytes": 2381
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR2/phase0.py",
+      "sha256": "a7a3661c07332967e96552ea4cc9abc3157fe2efe44912889bf017f11f455d0d",
+      "bytes": 5804
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR2/phase1.py",
+      "sha256": "25d35a0fa9cdcef156372aab1930b29466e7f992567f9892aeb52a3a1b105be8",
+      "bytes": 3835
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR2/public.py",
+      "sha256": "722c0599a9402f5d549757d6339bf616de0777b7b174d89ec83c05ef81bde962",
+      "bytes": 1666
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR3/phase0.py",
+      "sha256": "07a2646da66a090c132b8acad0fc5d0a384c55cbc52dd26ace18a8abf164b0ca",
+      "bytes": 6649
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR3/phase1.py",
+      "sha256": "a84aa960fae16c3bfa6b324ff63c3154b740752894ec8a55162ad62780d9cd03",
+      "bytes": 4391
+    },
+    {
+      "path": "examples/staged-code/acceptance/LR3/public.py",
+      "sha256": "70ec2961065861c578eadf8a41000a52f066bd5fc797f8cb1f92e4ecfc5fff04",
+      "bytes": 2476
+    },
+    {
+      "path": "examples/staged-code/contracts.json",
+      "sha256": "702fc7d005c7c96d8bb4856cb2af0afb4c020f38eae069574fa5a15f78f04e7f",
+      "bytes": 16640
+    },
+    {
+      "path": "examples/staged-code/staged-repo-LR1-high-clean-r1-sol.json",
+      "sha256": "d7d1dabb78e1509b4e38e974d7b105377cd8f05869e8e3b7c5e401ded0e4c5d4",
+      "bytes": 30404
+    },
+    {
+      "path": "examples/staged-code/staged-repo-LR1-high-clean-r1-astra.json",
+      "sha256": "b767602d5ceb171b2f1886c5cdbd07e2af14e1deeb67d75a84c16d9ad2bc6214",
+      "bytes": 53479
+    },
+    {
+      "path": "examples/staged-code/staged-repo-LR2-high-clean-r1-sol.json",
+      "sha256": "4a63bfd44e11c258c6a33f975d00815da6415229ef2d04f9a9071dbedfee2afb",
+      "bytes": 21610
+    },
+    {
+      "path": "examples/staged-code/staged-repo-LR2-high-clean-r1-astra.json",
+      "sha256": "668bace5c4bf9d1a7a86fe9eb5c21105767b085659214c620df08c0d48f16ba5",
+      "bytes": 41455
+    },
+    {
+      "path": "examples/staged-code/staged-repo-LR3-high-clean-r1-sol.json",
+      "sha256": "0a198450fc65019fccc5c32b846bc63eb6beda2f0b76d95996c45bf201a8db98",
+      "bytes": 26557
+    },
+    {
+      "path": "examples/staged-code/staged-repo-LR3-high-clean-r1-astra.json",
+      "sha256": "67cfe0877c4048bf9ad300f2b5eecca885a888d541e30d8b293c70538279f551",
+      "bytes": 49378
+    },
+    {
+      "path": "recompute.py",
+      "sha256": "988e7f4265f7984fa2a729d74aad8a0a3e82eb7244f2a774699b014b98c87005",
+      "bytes": 8460
+    },
+    {
+      "path": "sandbox.py",
+      "sha256": "8440769fdef88d01e0938d7961c58e36de7067a34177b26d6375cc1d114efbdf",
+      "bytes": 3886
+    },
+    {
+      "path": "verify_examples.py",
+      "sha256": "b3accf1569fd906815a7ca24d7397a8b60454463c40289a4bb91d4657bab4fb0",
+      "bytes": 2397
+    },
+    {
+      "path": "verify_package.py",
+      "sha256": "92cc45b4244bfa40f7a11de27cd95ffee5574c7f7557247f03c1f4b87463f160",
+      "bytes": 4888
+    },
+    {
+      "path": "verify_staged.py",
+      "sha256": "674ac80f7b426f29ead1d691af278081fe53effb5c789d195a4e1919db734c18",
+      "bytes": 2809
+    }
+  ],
+  "publishing_allowlist": [
+    "AMENDMENTS.md",
+    "README.md",
+    "SCHEMA.md",
+    "VERIFICATION.json",
+    "data/candidates.csv",
+    "data/candidates.json",
+    "data/claims.json",
+    "data/export-context.json",
+    "data/infrastructure-attempts.json",
+    "data/pairs.csv",
+    "data/pairs.json",
+    "data/presentation-scope.json",
+    "data/strata.csv",
+    "data/strata.json",
+    "data/stream-probes.json",
+    "examples/exact-reasoning/answers.json",
+    "examples/exact-reasoning/cases.json",
+    "examples/exact-reasoning/grader.py",
+    "examples/exact-reasoning/oracles.json",
+    "examples/exact-reasoning/verify_oracles.py",
+    "examples/short-api/records.json",
+    "examples/staged-code/acceptance/LR1/phase0.py",
+    "examples/staged-code/acceptance/LR1/phase1.py",
+    "examples/staged-code/acceptance/LR1/public.py",
+    "examples/staged-code/acceptance/LR2/phase0.py",
+    "examples/staged-code/acceptance/LR2/phase1.py",
+    "examples/staged-code/acceptance/LR2/public.py",
+    "examples/staged-code/acceptance/LR3/phase0.py",
+    "examples/staged-code/acceptance/LR3/phase1.py",
+    "examples/staged-code/acceptance/LR3/public.py",
+    "examples/staged-code/contracts.json",
+    "examples/staged-code/staged-repo-LR1-high-clean-r1-sol.json",
+    "examples/staged-code/staged-repo-LR1-high-clean-r1-astra.json",
+    "examples/staged-code/staged-repo-LR2-high-clean-r1-sol.json",
+    "examples/staged-code/staged-repo-LR2-high-clean-r1-astra.json",
+    "examples/staged-code/staged-repo-LR3-high-clean-r1-sol.json",
+    "examples/staged-code/staged-repo-LR3-high-clean-r1-astra.json",
+    "recompute.py",
+    "sandbox.py",
+    "verify_examples.py",
+    "verify_package.py",
+    "verify_staged.py",
+    "PUBLIC_FILES.json"
+  ]
+}

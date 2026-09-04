@@ -1,0 +1,27 @@
+{
+  "tool": "Matplotlib",
+  "version": "3.11.1",
+  "deck_data_sha256": "70b7cd8ed3036855d9b08d4a87dc9dcf4b4a8687f920412e3302a4449b4fe793",
+  "charts": [
+    {
+      "name": "exact-output",
+      "description": "Exact constraint reasoning output: Sol 30,679, Astra 10,968; 64.2% fewer Astra output tokens including reasoning. Selected matched high-effort tasks; full test scope is in the evidence.",
+      "svg_sha256": "ba2d951f3d130434889d5127850311f8b80708d5e499d27647e6c8ccd438d22f"
+    },
+    {
+      "name": "long-context-output",
+      "description": "Long-context output: Sol 6,979, Astra 4,957; 29.0% fewer Astra output tokens including reasoning. Selected matched high-effort tasks. Input and cached context excluded from this comparison; full test scope is in the evidence.",
+      "svg_sha256": "4e8ac7fbb4a6775a8a3c7bff261b33e6267f07064ac00abb8306d7010a07610b"
+    },
+    {
+      "name": "codex-output",
+      "description": "Codex output tokens including reasoning. Coding: Sol 1,674, Astra 1,403. Reasoning: Sol 2,185, Astra 1,622. Selected matched high-effort tasks. Unequal runtime context; not an API-versus-Codex causal comparison.",
+      "svg_sha256": "65248179e63b5dfdbe130a9480082a0f4d7396422ff7003039d19d82edfebd8c"
+    },
+    {
+      "name": "api-output",
+      "description": "Astra output relative to Sol at high effort. Exact reasoning -64.2%; earlier technical API -1.3%; public coding +1.1%; staged repositories +40.7%. Separate task families; output includes reasoning.",
+      "svg_sha256": "eb257fa998edd5537f9ead3f61c47758d4986e4609e79ecf06bb9ba55af2a38f"
+    }
+  ]
+}

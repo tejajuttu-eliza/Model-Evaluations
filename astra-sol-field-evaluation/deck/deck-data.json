@@ -1,0 +1,232 @@
+{
+  "source_audit_sha256": "2f38270f4f6788cf3ccdf06abab4dc09659dd54b2dc4fc464b8acf4a417f3f27",
+  "metric": "output includes reasoning; reduction = 1 - Astra sum / Sol sum",
+  "launch_name": "GPT-6 Astra",
+  "launch_checkpoint_retested": false,
+  "groups": {
+    "api": {
+      "pairs": 14,
+      "designs": 14,
+      "selection": "matched passing pairs; public technical selection",
+      "pair_ids": [
+        "C1-high-r1",
+        "C2-high-r1",
+        "C3-high-r1",
+        "D1-high-r1",
+        "D2-high-r1",
+        "HE000-high-r1",
+        "HE012-high-r1",
+        "HE026-high-r1",
+        "HE035-high-r1",
+        "N1-high-r1",
+        "N2-high-r1",
+        "R1-high-r1",
+        "R2-high-r1",
+        "R3-high-r1"
+      ],
+      "sol": {
+        "input_tokens": 15279,
+        "output_tokens": 6654,
+        "reasoning_tokens": 3967
+      },
+      "astra": {
+        "input_tokens": 15279,
+        "output_tokens": 6565,
+        "reasoning_tokens": 3872
+      }
+    },
+    "public": {
+      "pairs": 16,
+      "designs": 16,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "HE005-high-r1",
+        "HE006-high-r1",
+        "HE024-high-r1",
+        "HE074-high-r1",
+        "HE083-high-r1",
+        "HE094-high-r1",
+        "HE096-high-r1",
+        "HE118-high-r1",
+        "HE120-high-r1",
+        "HE121-high-r1",
+        "HE125-high-r1",
+        "HE141-high-r1",
+        "HE143-high-r1",
+        "HE148-high-r1",
+        "HE160-high-r1",
+        "HE162-high-r1"
+      ],
+      "sol": {
+        "input_tokens": 3808,
+        "output_tokens": 5656,
+        "reasoning_tokens": 2874
+      },
+      "astra": {
+        "input_tokens": 3808,
+        "output_tokens": 5717,
+        "reasoning_tokens": 3098
+      }
+    },
+    "exact": {
+      "pairs": 6,
+      "designs": 3,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "frontier-reasoning-XR-A1-high-clean-r1",
+        "frontier-reasoning-XR-A1-high-clean-r2",
+        "frontier-reasoning-XR-P1-high-clean-r1",
+        "frontier-reasoning-XR-P1-high-clean-r2",
+        "frontier-reasoning-XR-S1-high-clean-r1",
+        "frontier-reasoning-XR-S1-high-clean-r2"
+      ],
+      "sol": {
+        "input_tokens": 5616,
+        "output_tokens": 30679,
+        "reasoning_tokens": 29855
+      },
+      "astra": {
+        "input_tokens": 5616,
+        "output_tokens": 10968,
+        "reasoning_tokens": 9902
+      },
+      "design_detail": "3 designs with 2 repetitions each; 6 matched high-effort pairs."
+    },
+    "staged": {
+      "pairs": 3,
+      "designs": 3,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "staged-repo-LR1-high-clean-r1",
+        "staged-repo-LR2-high-clean-r1",
+        "staged-repo-LR3-high-clean-r1"
+      ],
+      "sol": {
+        "input_tokens": 503243,
+        "output_tokens": 34579,
+        "reasoning_tokens": 15498
+      },
+      "astra": {
+        "input_tokens": 810417,
+        "output_tokens": 48660,
+        "reasoning_tokens": 10344
+      }
+    },
+    "context": {
+      "pairs": 4,
+      "designs": 2,
+      "selection": "matched passing pairs",
+      "pair_ids": [
+        "context-extension-CX1-192k-3turn-high-clean-r1",
+        "context-extension-CX1-96k-3turn-high-clean-r1",
+        "context-extension-CX2-192k-3turn-high-clean-r1",
+        "context-extension-CX2-96k-3turn-high-clean-r1"
+      ],
+      "sol": {
+        "input_tokens": 1720878,
+        "output_tokens": 6979,
+        "reasoning_tokens": 3324
+      },
+      "astra": {
+        "input_tokens": 1718123,
+        "output_tokens": 4957,
+        "reasoning_tokens": 1150
+      },
+      "design_detail": "2 designs at 2 context sizes each; 4 matched high-effort pairs."
+    },
+    "codex_coding": {
+      "pairs": 3,
+      "designs": 3,
+      "selection": "all assigned pairs",
+      "pair_ids": [
+        "C1-high-r1",
+        "C2-high-r1",
+        "C3-high-r1"
+      ],
+      "sol": {
+        "input_tokens": 222134,
+        "output_tokens": 1674,
+        "reasoning_tokens": 493
+      },
+      "astra": {
+        "input_tokens": 194634,
+        "output_tokens": 1403,
+        "reasoning_tokens": 391
+      }
+    },
+    "codex_reasoning": {
+      "pairs": 3,
+      "designs": 3,
+      "selection": "all assigned pairs; all both pass",
+      "pair_ids": [
+        "R1-high-r1",
+        "R2-high-r1",
+        "R3-high-r1"
+      ],
+      "sol": {
+        "input_tokens": 222281,
+        "output_tokens": 2185,
+        "reasoning_tokens": 1416
+      },
+      "astra": {
+        "input_tokens": 194754,
+        "output_tokens": 1622,
+        "reasoning_tokens": 844
+      }
+    }
+  },
+  "history_note": "The illustrated public scope excludes 48 historical FDE-labeled candidates. The complete 412-candidate ledger is preserved separately; this deck covers 364 candidates.",
+  "public_scope": {
+    "source_file": "../evidence/data/presentation-scope.json",
+    "source_sha256": "735a1b5a77c397acea3b904b1ffb008b2c110215cd28516c5aadf1195b429b2b",
+    "totals": {
+      "input_tokens": 17448967,
+      "output_tokens": 970125,
+      "total_tokens": 18419092,
+      "reasoning_tokens": 532841,
+      "nonreasoning_tokens": 437284,
+      "cache_read_tokens": 13375899,
+      "cache_write_tokens": 3899585,
+      "calls": 1167,
+      "ordinary_input_tokens": 173483,
+      "candidates": 364,
+      "pairs": 182
+    },
+    "by_surface": {
+      "Codex": {
+        "input_tokens": 2919737,
+        "output_tokens": 25474,
+        "total_tokens": 2945211,
+        "reasoning_tokens": 10507,
+        "nonreasoning_tokens": 14967,
+        "cache_read_tokens": 2844954,
+        "cache_write_tokens": 12416,
+        "calls": 84,
+        "ordinary_input_tokens": 62367,
+        "candidates": 42,
+        "pairs": 21
+      },
+      "Responses API": {
+        "input_tokens": 14529230,
+        "output_tokens": 944651,
+        "total_tokens": 15473881,
+        "reasoning_tokens": 522334,
+        "nonreasoning_tokens": 422317,
+        "cache_read_tokens": 10530945,
+        "cache_write_tokens": 3887169,
+        "calls": 1083,
+        "ordinary_input_tokens": 111116,
+        "candidates": 322,
+        "pairs": 161
+      }
+    },
+    "token_definition": "Recorded input plus output, including cached and repeated context; not generated tokens alone, unique corpus size or internal compute.",
+    "classification": "Exclude rows whose existing lane label is exactly fde or synthetic-FDE. This is a taxonomy filter, not a retrospective semantic relabeling of tasks."
+  },
+  "presentation_note": "Selected efficiency highlights with matched passing outcomes. Results vary by task family. The complete outcomes remain in the separate evidence package.",
+  "public_model_labels": [
+    "astra-early-access",
+    "gpt-5.6-sol"
+  ],
+  "model_label_note": "Public labels identify the compared model families and early-access status. They are not literal provider request identifiers; internal routing identifiers are not distributed."
+}

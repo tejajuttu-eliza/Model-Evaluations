@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "measurement_status": "No new model calls; offline verification of pre-release observations.",
+  "arithmetic": {
+    "candidate_rows": 412,
+    "matched_pairs": 206,
+    "strata": 68,
+    "source_aggregate_fields_reconciled": 14960
+  },
+  "exact_reasoning": {
+    "independently_enumerated_oracles": 3,
+    "answers_regraded": 12,
+    "negative_grader_controls": 36
+  },
+  "short_api": {
+    "answer_metadata_matches": 12,
+    "generated_code_executed": false
+  },
+  "staged_code": {
+    "final_snapshots": 6,
+    "acceptance_test_methods": 126,
+    "all_pass": true,
+    "scope": "Final snapshot acceptance only; not model-workflow replay.",
+    "isolation": {
+      "macos_sandbox": true,
+      "outside_read_denied": true,
+      "network_denied": true,
+      "workspace_write": true
+    }
+  },
+  "limits": [
+    "Exported arithmetic checks do not independently authenticate provider records.",
+    "The production GPT-6-Astra checkpoint was not retested.",
+    "Archived missing usage remains null."
+  ],
+  "presentation_scope": {
+    "candidate_rows": 364,
+    "pairs": 182,
+    "recorded_total_tokens": 18419092,
+    "api_candidates": 322,
+    "codex_candidates": 42,
+    "excluded_lanes": [
+      "fde",
+      "synthetic-FDE"
+    ],
+    "initial_objective_api_pairs_after_exclusion": 14
+  }
+}

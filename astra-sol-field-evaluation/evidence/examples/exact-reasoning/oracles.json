@@ -1,0 +1,636 @@
+{
+  "XR-A1": {
+    "family": "assignment",
+    "instance": {
+      "machines": {
+        "A": {
+          "capacity": 11,
+          "fixed_cost": 9
+        },
+        "B": {
+          "capacity": 10,
+          "fixed_cost": 5
+        },
+        "C": {
+          "capacity": 9,
+          "fixed_cost": 4
+        },
+        "D": {
+          "capacity": 8,
+          "fixed_cost": 3
+        }
+      },
+      "jobs": {
+        "J1": {
+          "load": 4,
+          "allowed": [
+            "A",
+            "B"
+          ],
+          "costs": {
+            "A": 5,
+            "B": 6,
+            "C": 13,
+            "D": 11
+          }
+        },
+        "J2": {
+          "load": 3,
+          "allowed": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "costs": {
+            "A": 11,
+            "B": 1,
+            "C": 12,
+            "D": 10
+          }
+        },
+        "J3": {
+          "load": 2,
+          "allowed": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "costs": {
+            "A": 9,
+            "B": 10,
+            "C": 5,
+            "D": 10
+          }
+        },
+        "J4": {
+          "load": 4,
+          "allowed": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "costs": {
+            "A": 8,
+            "B": 9,
+            "C": 10,
+            "D": 2
+          }
+        },
+        "J5": {
+          "load": 3,
+          "allowed": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "costs": {
+            "A": 11,
+            "B": 9,
+            "C": 13,
+            "D": 10
+          }
+        },
+        "J6": {
+          "load": 2,
+          "allowed": [
+            "B",
+            "C",
+            "D"
+          ],
+          "costs": {
+            "A": 6,
+            "B": 1,
+            "C": 2,
+            "D": 12
+          }
+        },
+        "J7": {
+          "load": 4,
+          "allowed": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "costs": {
+            "A": 5,
+            "B": 6,
+            "C": 2,
+            "D": 8
+          }
+        },
+        "J8": {
+          "load": 3,
+          "allowed": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "costs": {
+            "A": 4,
+            "B": 5,
+            "C": 6,
+            "D": 8
+          }
+        },
+        "J9": {
+          "load": 2,
+          "allowed": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "costs": {
+            "A": 5,
+            "B": 8,
+            "C": 3,
+            "D": 2
+          }
+        }
+      },
+      "separate": [
+        [
+          "J1",
+          "J2"
+        ],
+        [
+          "J4",
+          "J7"
+        ],
+        [
+          "J3",
+          "J8"
+        ]
+      ],
+      "together": [
+        [
+          "J5",
+          "J9"
+        ]
+      ]
+    },
+    "objective": 58,
+    "feasible_count": 2972,
+    "optimal_count": 2,
+    "optima": [
+      {
+        "status": "optimal",
+        "assignment": {
+          "J1": "A",
+          "J2": "B",
+          "J3": "C",
+          "J4": "D",
+          "J5": "A",
+          "J6": "B",
+          "J7": "C",
+          "J8": "B",
+          "J9": "A"
+        },
+        "objective": 58,
+        "checks": {
+          "loads": {
+            "A": 9,
+            "B": 8,
+            "C": 6,
+            "D": 4
+          },
+          "opened": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "variable_cost": 37,
+          "fixed_cost": 21
+        },
+        "explanation": "The listed assignment respects allowed machines, capacities, and pair rules; variable and opening costs sum to the objective."
+      },
+      {
+        "status": "optimal",
+        "assignment": {
+          "J1": "A",
+          "J2": "B",
+          "J3": "C",
+          "J4": "D",
+          "J5": "B",
+          "J6": "B",
+          "J7": "C",
+          "J8": "A",
+          "J9": "B"
+        },
+        "objective": 58,
+        "checks": {
+          "loads": {
+            "A": 7,
+            "B": 10,
+            "C": 6,
+            "D": 4
+          },
+          "opened": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "variable_cost": 37,
+          "fixed_cost": 21
+        },
+        "explanation": "The listed assignment respects allowed machines, capacities, and pair rules; variable and opening costs sum to the objective."
+      }
+    ],
+    "feasible_suboptimal": {
+      "status": "optimal",
+      "assignment": {
+        "J1": "A",
+        "J2": "B",
+        "J3": "A",
+        "J4": "A",
+        "J5": "B",
+        "J6": "B",
+        "J7": "C",
+        "J8": "C",
+        "J9": "B"
+      },
+      "objective": 67,
+      "checks": {
+        "loads": {
+          "A": 10,
+          "B": 10,
+          "C": 7,
+          "D": 0
+        },
+        "opened": [
+          "A",
+          "B",
+          "C"
+        ],
+        "variable_cost": 49,
+        "fixed_cost": 18
+      },
+      "explanation": "The listed assignment respects allowed machines, capacities, and pair rules; variable and opening costs sum to the objective."
+    },
+    "enumeration": "all allowed assignments"
+  },
+  "XR-S1": {
+    "family": "scheduling",
+    "instance": {
+      "horizon": 12,
+      "capacity": {
+        "crew": 2
+      },
+      "makespan_multiplier": 0,
+      "jobs": {
+        "T1": {
+          "duration": 3,
+          "weight": 3,
+          "release": 0,
+          "deadline": 12,
+          "after": [],
+          "resources": {
+            "crew": 1
+          },
+          "blocked": []
+        },
+        "T2": {
+          "duration": 2,
+          "weight": 6,
+          "release": 0,
+          "deadline": 12,
+          "after": [],
+          "resources": {
+            "crew": 1
+          },
+          "blocked": []
+        },
+        "T3": {
+          "duration": 2,
+          "weight": 1,
+          "release": 1,
+          "deadline": 12,
+          "after": [],
+          "resources": {
+            "crew": 1
+          },
+          "blocked": []
+        },
+        "T4": {
+          "duration": 3,
+          "weight": 4,
+          "release": 0,
+          "deadline": 12,
+          "after": [
+            "T1"
+          ],
+          "resources": {
+            "crew": 2
+          },
+          "blocked": []
+        },
+        "T5": {
+          "duration": 2,
+          "weight": 7,
+          "release": 0,
+          "deadline": 12,
+          "after": [
+            "T2"
+          ],
+          "resources": {
+            "crew": 1
+          },
+          "blocked": []
+        },
+        "T6": {
+          "duration": 2,
+          "weight": 5,
+          "release": 0,
+          "deadline": 12,
+          "after": [
+            "T3",
+            "T5"
+          ],
+          "resources": {
+            "crew": 1
+          },
+          "blocked": []
+        },
+        "T7": {
+          "duration": 1,
+          "weight": 9,
+          "release": 0,
+          "deadline": 12,
+          "after": [
+            "T4",
+            "T6"
+          ],
+          "resources": {
+            "crew": 1
+          },
+          "blocked": []
+        }
+      }
+    },
+    "objective": 217,
+    "feasible_count": 212,
+    "optimal_count": 1,
+    "optima": [
+      {
+        "status": "optimal",
+        "starts": {
+          "T1": 3,
+          "T2": 0,
+          "T3": 1,
+          "T4": 6,
+          "T5": 2,
+          "T6": 4,
+          "T7": 9
+        },
+        "objective": 217,
+        "checks": {
+          "completion_times": {
+            "T1": 6,
+            "T2": 2,
+            "T3": 3,
+            "T4": 9,
+            "T5": 4,
+            "T6": 6,
+            "T7": 10
+          },
+          "makespan": 10,
+          "weighted_completion": 217
+        },
+        "explanation": "All intervals are half-open and respect releases, deadlines, dependencies, resource capacity, and any blocked intervals. The objective follows from the listed completion times."
+      }
+    ],
+    "feasible_suboptimal": {
+      "status": "optimal",
+      "starts": {
+        "T1": 0,
+        "T2": 0,
+        "T3": 2,
+        "T4": 4,
+        "T5": 7,
+        "T6": 9,
+        "T7": 11
+      },
+      "objective": 279,
+      "checks": {
+        "completion_times": {
+          "T1": 3,
+          "T2": 2,
+          "T3": 4,
+          "T4": 7,
+          "T5": 9,
+          "T6": 11,
+          "T7": 12
+        },
+        "makespan": 12,
+        "weighted_completion": 279
+      },
+      "explanation": "All intervals are half-open and respect releases, deadlines, dependencies, resource capacity, and any blocked intervals. The objective follows from the listed completion times."
+    },
+    "enumeration": "all feasible integral starts within the stated horizon"
+  },
+  "XR-P1": {
+    "family": "project_selection",
+    "instance": {
+      "projects": {
+        "P1": {
+          "cost": 7,
+          "hours": 5,
+          "value": 7,
+          "requires": []
+        },
+        "P2": {
+          "cost": 2,
+          "hours": 7,
+          "value": 15,
+          "requires": []
+        },
+        "P3": {
+          "cost": 6,
+          "hours": 4,
+          "value": 14,
+          "requires": []
+        },
+        "P4": {
+          "cost": 9,
+          "hours": 7,
+          "value": 12,
+          "requires": []
+        },
+        "P5": {
+          "cost": 4,
+          "hours": 6,
+          "value": 14,
+          "requires": []
+        },
+        "P6": {
+          "cost": 8,
+          "hours": 4,
+          "value": 5,
+          "requires": [
+            "P1"
+          ]
+        },
+        "P7": {
+          "cost": 8,
+          "hours": 3,
+          "value": 16,
+          "requires": []
+        },
+        "P8": {
+          "cost": 8,
+          "hours": 3,
+          "value": 15,
+          "requires": [
+            "P2",
+            "P3"
+          ]
+        },
+        "P9": {
+          "cost": 3,
+          "hours": 2,
+          "value": 4,
+          "requires": []
+        },
+        "P10": {
+          "cost": 7,
+          "hours": 7,
+          "value": 16,
+          "requires": [
+            "P6"
+          ]
+        }
+      },
+      "limits": {
+        "cost": 27,
+        "hours": 22
+      },
+      "prohibited": [
+        "P4"
+      ],
+      "exclusive": [
+        [
+          "P2",
+          "P7"
+        ]
+      ],
+      "exactly_one": [],
+      "at_least_one": [
+        [
+          "P1",
+          "P2"
+        ],
+        [
+          "P5",
+          "P9"
+        ]
+      ],
+      "bonuses": [
+        {
+          "all_of": [
+            "P1",
+            "P5"
+          ],
+          "value": 7
+        }
+      ],
+      "authority": {
+        "cost": "B2",
+        "hours": "H2",
+        "prohibited": "S1"
+      },
+      "evidence": [
+        {
+          "id": "B1",
+          "status": "superseded signed budget",
+          "text": "Original budget: 35 cost units."
+        },
+        {
+          "id": "B2",
+          "status": "current signed amendment",
+          "text": "Replaces B1: total budget is 27 cost units."
+        },
+        {
+          "id": "H1",
+          "status": "later draft staffing proposal",
+          "text": "Proposal only: 29 hours may be available."
+        },
+        {
+          "id": "H2",
+          "status": "current approved staffing",
+          "text": "Available hours: 22. No later staffing approval exists."
+        },
+        {
+          "id": "S1",
+          "status": "current approved security decision",
+          "text": "P4 is prohibited for this release."
+        },
+        {
+          "id": "N1",
+          "status": "informal later chat",
+          "text": "Someone suggests P4 is probably okay and the old 35-unit budget still applies."
+        }
+      ]
+    },
+    "objective": 62,
+    "feasible_count": 38,
+    "optimal_count": 1,
+    "optima": [
+      {
+        "status": "optimal",
+        "selected": [
+          "P2",
+          "P3",
+          "P5",
+          "P8",
+          "P9"
+        ],
+        "objective": 62,
+        "checks": {
+          "resource_totals": {
+            "cost": 23,
+            "hours": 22
+          },
+          "base_value": 62,
+          "bonus_value": 0,
+          "authoritative_sources": {
+            "cost": "B2",
+            "hours": "H2",
+            "prohibited": "S1"
+          }
+        },
+        "explanation": "The selected projects obey the authoritative limits, dependency and group rules. Count each project once and add a bonus only when every member is selected."
+      }
+    ],
+    "feasible_suboptimal": {
+      "status": "optimal",
+      "selected": [
+        "P1",
+        "P5"
+      ],
+      "objective": 28,
+      "checks": {
+        "resource_totals": {
+          "cost": 11,
+          "hours": 11
+        },
+        "base_value": 21,
+        "bonus_value": 7,
+        "authoritative_sources": {
+          "cost": "B2",
+          "hours": "H2",
+          "prohibited": "S1"
+        }
+      },
+      "explanation": "The selected projects obey the authoritative limits, dependency and group rules. Count each project once and add a bonus only when every member is selected."
+    },
+    "enumeration": "all project subsets"
+  }
+}

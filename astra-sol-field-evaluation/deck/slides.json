@@ -1,0 +1,66 @@
+[
+  {
+    "key": "cover",
+    "eyebrow": "GPT-6 Astra vs GPT-5.6 Sol",
+    "title": "Where Astra improves<br><em>on Sol.</em>",
+    "note": "Recorded tokens include input, output and cached/repeated context across both models. Results vary by task.",
+    "sources": "Companion evidence package \u00b7 scope and model provenance",
+    "cls": "cover"
+  },
+  {
+    "key": "exact",
+    "eyebrow": "API \u00b7 Astra vs Sol \u00b7 Exact reasoning",
+    "title": "Exact reasoning.<br><em>64.2% fewer output tokens.</em>",
+    "note": "Summed output includes reasoning. Small exploratory sample; the same effort setting does not imply equal compute.",
+    "sources": "Companion evidence package \u00b7 exact reasoning claims and candidate ledger",
+    "cls": ""
+  },
+  {
+    "key": "surfaces",
+    "eyebrow": "API and Codex \u00b7 Separate evidence surfaces",
+    "title": "Less output than Sol.<br><em>In Codex, too.</em>",
+    "note": "Synthetic packet tasks; runtime context differed by model. Read these results separately from the API tests.",
+    "sources": "Companion evidence package \u00b7 surface inventory and Codex strata",
+    "cls": ""
+  },
+  {
+    "key": "context",
+    "eyebrow": "API \u00b7 Astra vs Sol \u00b7 Long context",
+    "title": "Long context.<br><em>29.0% fewer output tokens.</em>",
+    "note": "Output includes reasoning; input and cached context are excluded. Test details and context sizes are linked in the evidence.",
+    "sources": "Companion evidence package \u00b7 long-context candidates and usage",
+    "cls": ""
+  },
+  {
+    "key": "delegation",
+    "eyebrow": "Practitioner observations \u00b7 Codex",
+    "title": "A more natural<br><em>delegation workflow.</em>",
+    "note": "Qualitative Eliza engineering feedback. Autonomous delegation and coordination were not measured in the benchmark.",
+    "sources": "Eliza practitioner observations \u00b7 engineering feedback supplied for this evaluation",
+    "cls": ""
+  },
+  {
+    "key": "task-fit",
+    "eyebrow": "Direct API \u00b7 Astra output relative to Sol",
+    "title": "Match the model<br><em>to the task.</em>",
+    "note": "Separate task families and matched passing pairs. Output includes reasoning. Gains vary by workload; repeats are not new designs.",
+    "sources": "Companion evidence package \u00b7 API claims and candidate ledger",
+    "cls": ""
+  },
+  {
+    "key": "evidence",
+    "eyebrow": "An inspectable evaluation",
+    "title": "The evidence should<br><em>travel with the claim.</em>",
+    "note": "Full outcomes, retries and limits are included in the companion evidence package. Small exploratory samples and repeated runs do not establish a universal ranking.",
+    "sources": "Companion evidence package \u00b7 methodology, claims, candidates and strata",
+    "cls": ""
+  },
+  {
+    "key": "takeaway",
+    "eyebrow": "What we are excited to explore next",
+    "title": "A promising upgrade.<br><em>For the right tasks.</em>",
+    "note": "Validate the current models on your own tasks and acceptance criteria before generalizing these early-access findings.",
+    "sources": "Eliza \u00b7 technical delivery and model evaluation",
+    "cls": "closing"
+  }
+]
